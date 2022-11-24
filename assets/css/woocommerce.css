@@ -1,0 +1,25 @@
+
+.woocommerce form input {
+    border-bottom: 1px solid var(--cor1);
+}
+
+.custom-edit-account .woocommerce,
+.custom-edit-address .woocommerce,
+.custom-downloads .woocommerce,
+.custom-orders .woocommerce,
+.custom-minha-conta .woocommerce {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .custom-edit-account .woocommerce,
+    .custom-edit-address .woocommerce,
+    .custom-downloads .woocommerce,
+    .custom-orders .woocommerce,
+    .custom-minha-conta .woocommerce {
+        display: grid;
+        grid-template-columns: 30% 1fr;
+    }
+}
