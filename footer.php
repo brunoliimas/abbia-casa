@@ -1,3 +1,7 @@
+<?php include __DIR__ . "/inc/newsletter.php"; ?>
+
+<?php include __DIR__ . "/inc/shop.php"; ?>
+
 <?php
     
     $lf = new Layout();
@@ -5,6 +9,7 @@
     $sT = "text-[12px] lg:text-[14px] text-cor1";    
 
 ?>
+
     <footer class="bg-cor3 px-4 py-[40px] lg:py[50px]">
         <div class="container mx-auto">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
