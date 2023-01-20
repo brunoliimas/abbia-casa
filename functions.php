@@ -3,6 +3,8 @@
 include __DIR__ . "/classes/Layout.php";
 include __DIR__ . "/classes/Page.php";
 include __DIR__ . "/inc/helps.php";
+include __DIR__ . "/inc/short_summary.php";
+include __DIR__ . "/inc/theme_mod.php";
 
 add_theme_support('block-templates');
 add_theme_support('post-thumbnails');

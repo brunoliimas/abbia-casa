@@ -1,47 +1,17 @@
 <?php get_header(); ?>
 
 <?php
-$summaries = [
-    "Entrega",
-    "Condições de retorno",
-    "Entrega",
-    "Condições de retorno",
-    "Entrega",
-    "Condições de retorno",
-    "Entrega",
-    "Condições de retorno",
-];
+$page = new Page();
 ?>
+
 <article>
-    <div>
-        <h1>FAQ</h1>
-        <h2>Como funciona</h2>
-        <?php foreach($summaries as $title) { ?>
-            <details>
-                <summary><?php echo $title; ?></summary>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatum earum animi!
-                </p>
-            </details>
-        <?php } ?>
-        <h2>Retorno</h2>
-        <?php foreach($summaries as $title) { ?>
-            <details>
-                <summary><?php echo $title; ?></summary>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatum earum animi!
-                </p>
-            </details>
-        <?php } ?>
-        <h2>Privacidade</h2>
-        <?php foreach($summaries as $title) { ?>
-            <details>
-                <summary><?php echo $title; ?></summary>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatum earum animi!
-                </p>
-            </details>
-        <?php } ?>
+    <div class="w-[90%] lg:w-[700px] px-4  mx-auto">
+        <h1 class="uppercase font-romie block text-center text-cor1 text-[55px] md:text-[66px] mb-[40]">
+            <?php echo $page->title; ?>
+        </h1>
+        <div class="custom-post">
+            <?php $page->content(); ?>
+        </div>
     </div>
 </article>
 
