@@ -55,16 +55,16 @@
                     <h4 class="<?php echo $sTitle; ?>">
                         Conta
                     </h4>
-                    <a href="" class="<?php echo $sT; ?> block" title="Login">
+                    <a href="<?php echo site_url() ?>/minha-conta" class="<?php echo $sT; ?> block" title="Login">
                         Login
                     </a>
-                    <a href="" class="<?php echo $sT; ?> block" title="Cadastre-se">
+                    <a href="<?php echo site_url() ?>/minha-conta" class="<?php echo $sT; ?> block" title="Cadastre-se">
                         Cadastre-se
                     </a>
-                    <a href="" class="<?php echo $sT; ?> block" title="Minha Conta">
+                    <a href="<?php echo site_url() ?>/minha-conta" class="<?php echo $sT; ?> block" title="Minha Conta">
                         Minha Conta
                     </a>
-                    <a href="" class="<?php echo $sT; ?> block" title="Meus Pedidos">
+                    <a href="<?php echo site_url() ?>/minha-conta/orders/" class="<?php echo $sT; ?> block" title="Meus Pedidos">
                         Meus Pedidos
                     </a>
                 </div>
@@ -73,10 +73,10 @@
                         Termos legais <br>
                         e LGPD
                     </h>
-                    <a href="" class="<?php echo $sT; ?>" title="Termos e condições">
+                    <a href="<?php echo site_url() ?>/lgpd" class="<?php echo $sT; ?>" title="Termos e condições">
                         Termos e condições
                     </a>
-                    <a href="" class="<?php echo $sT; ?>" title="Politica de venda">
+                    <a href="<?php echo site_url() ?>/politica-de-venda" class="<?php echo $sT; ?>" title="Politica de venda">
                         Politica de venda
                     </a>
                     <span class="grid grid-cols-2 lg:grid-cols-4 mt-4">
@@ -91,7 +91,7 @@
         <div class="border-t border-cor1 mt-8 pt-8 text-center">
             <span class="<?php echo $sT; ?>">
                 Copyright <br>
-                Abbia Casa 2022
+                Abbia Casa 2023
             </span>
         </div>
     </footer>
