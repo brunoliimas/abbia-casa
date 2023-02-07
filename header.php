@@ -1,6 +1,6 @@
 <?php
 
-    $layout = new Layout();
+$layout = new Layout();
 
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php wp_title('|', true, 'right'); ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/fonts.css">
-    <link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_uri() ); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>">
     <script>
         tailwind.config = {
             theme: {
@@ -53,7 +53,7 @@
 </head>
 
 <body class="font-agrandir <?php echo getSlug(); ?>">
-    
+
     <?php wp_body_open(); ?>
 
     <nav id="js-nav-pop" class="fixed top-0 left-[-300px] h-full bg-cor3 p-4 w-[270px] z-10 transition-all duration-300 ease-in-out">
@@ -63,16 +63,16 @@
         <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
         <ul>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/" title="Casa">Casa</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/casa" title="Casa">Casa</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/" title="Acessórios">Acessórios</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/acessorios" title="Acessórios">Acessórios</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/" title="Sac du jour">Sac du jour</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/sac-du-jour" title="Sac du jour">Sac du jour</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/" title="Beauté">Beauté</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/beaute" title="Beauté">Beauté</a>
                 <ul class="hidden">
                     <li>
                         <a href="" title="">Rosto</a>
@@ -101,43 +101,45 @@
                 </ul>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="" title="">Colabs</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/colabs" title="Colabs">Colabs</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]"  href="" title="">Novidades</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/novidades" title="Novidades">Novidades</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="" title="">A curadoria</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/art-de-vivre-abbia-casa" title="A curadoria">A curadoria</a>
             </li>
             <li>
-                <a class=" text-[18px]" href="#" title="">+ Infos </a>
+                <a class=" text-[18px]" href="#" title="+ Infos">+ Infos </a>
                 <ul class="hidden">
                     <li>
-                        <a href="" title="">Newsletter</a>
+                        <a href="<?php echo site_url() ?>/contato#newsletter" title="Newsletter">Newsletter</a>
                     </li>
                     <li>
-                        <a href="" title="">Contato</a>
+                        <a href="<?php echo site_url() ?>/contato" title="Contato">Contato</a>
                     </li>
                     <li>
-                        <a href="" title="">Quem somos</a>
+                        <a href="<?php echo site_url() ?>/quem-somos" title="Quem somos">Quem somos</a>
                     </li>
                     <li>
-                        <a href="" title="">Politica de privacidade</a>
+                        <a href="<?php echo site_url() ?>/lgpd" title="Politica de privacidade">Politica de privacidade</a>
                     </li>
                     <li>
-                        <a href="" title="">Politica de venda</a>
+                        <a href="<?php echo site_url() ?>/politica-de-venda" title="Politica de venda">Politica de venda</a>
                     </li>
                     <li>
-                        <a href="" title="">FAQ</a>
+                        <a href="<?php echo site_url() ?>/faq" title="FAQ">FAQ</a>
                     </li>
                 </ul>
             </li>
         </ul>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="instagram">
+        <a href="https://www.instagram.com/abbiacasa" target="_blank" rel="noopener noreferrer" title="instagram">
             <img src="<?php echo  $layout->getFile('/assets/images/social/instagram.svg') ?>" alt="instagram" loading="lazy">
         </a>
         <div class="flex justify-between items-center absolute bottom-0 left-0 w-full p-4 bg-color-3 md:hidden">
-            <a href="<?php echo site_url() ?>/minha-conta" title="Entrar">Entrar</a>
+            <a href="<?php echo site_url() ?>/minha-conta" title="Entrar">
+                <?php echo is_user_logged_in() ? 'Perfil' : 'Entrar' ?>
+            </a>
             <a href="<?php echo site_url() ?>/lista-de-desejos" title="lista de desejos">
                 <img class="w-[27px]" src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
             </a>
@@ -159,8 +161,8 @@
                         <input name="s" type="search" class="border-b border-cor1" title="O que você procura?">
                     </label>
                 </form>
-                <a href="<?php echo site_url() ?>/minha-conta" title="Entrar" class="flex-none w-[50px] hidden lg:block"> 
-                    Entrar 
+                <a href="<?php echo site_url() ?>/minha-conta" title="Entrar" class="flex-none w-[50px] hidden lg:block">
+                    <?php echo is_user_logged_in() ? 'Perfil' : 'Entrar' ?>
                 </a>
                 <a href="<?php echo site_url() ?>/lista-de-desejos" title="lista de desejos" class="flex-none w-[50px] hidden lg:block">
                     <img src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
@@ -171,4 +173,3 @@
             </div>
         </div>
     </header>
-    
