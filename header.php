@@ -58,7 +58,7 @@
 
     <nav id="js-nav-pop" class="fixed top-0 left-[-300px] h-full bg-cor3 p-4 w-[270px] z-10 transition-all duration-300 ease-in-out">
         <span>
-            <img class="w-[40px] lg:hidden" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
+            <img class="w-[40px] md:hidden" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
         </span>
         <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
         <ul>
@@ -136,7 +136,7 @@
         <a href="" target="_blank" rel="noopener noreferrer" title="instagram">
             <img src="<?php echo  $layout->getFile('/assets/images/social/instagram.svg') ?>" alt="instagram" loading="lazy">
         </a>
-        <div class="flex justify-between items-center absolute bottom-0 left-0 w-full p-4 bg-color-3 lg:hidden">
+        <div class="flex justify-between items-center absolute bottom-0 left-0 w-full p-4 bg-color-3 md:hidden">
             <a href="">Log in</a>
             <a href="" title="">
                 <img class="w-[27px]" src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
