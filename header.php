@@ -63,16 +63,16 @@
         <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
         <ul>
             <li>
-                <a class="font-romie text-[33px]" href="" title="">Casa</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/" title="Casa">Casa</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="" title="">Acessoríos</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/" title="Acessórios">Acessórios</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="" title="">Sac du jour</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/" title="Sac du jour">Sac du jour</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="" title="">Beauté</a>
+                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/" title="Beauté">Beauté</a>
                 <ul class="hidden">
                     <li>
                         <a href="" title="">Rosto</a>
@@ -107,7 +107,7 @@
                 <a class="font-romie text-[33px]"  href="" title="">Novidades</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="" title="">A curadoria</aclass=>
+                <a class="font-romie text-[33px]" href="" title="">A curadoria</a>
             </li>
             <li>
                 <a class=" text-[18px]" href="#" title="">+ Infos </a>
@@ -133,15 +133,15 @@
                 </ul>
             </li>
         </ul>
-        <a href="" target="_blank" rel="noopener noreferrer" title="instagram">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="instagram">
             <img src="<?php echo  $layout->getFile('/assets/images/social/instagram.svg') ?>" alt="instagram" loading="lazy">
         </a>
         <div class="flex justify-between items-center absolute bottom-0 left-0 w-full p-4 bg-color-3 md:hidden">
-            <a href="">Log in</a>
-            <a href="" title="">
+            <a href="<?php echo site_url() ?>/minha-conta" title="Entrar">Entrar</a>
+            <a href="<?php echo site_url() ?>/lista-de-desejos" title="lista de desejos">
                 <img class="w-[27px]" src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
             </a>
-            <a href="" title="">
+            <a href="<?php echo site_url() ?>/carrinho" title="Carrinho">
                 <img class="w-[27px]" src="<?php echo  $layout->getFile('/assets/images/layout/bag.svg') ?>" alt="carrinho" loading="lazy">
             </a>
         </div>
@@ -153,19 +153,19 @@
                 <a id="js-nav-ico" href="javascript:void(0)" title="menu site" class="flex-none w-[50px] ml-5 lg:ml-0">
                     <img src="<?php echo $layout->getFile('/assets/images/layout/menu.svg') ?>" alt="menu" loading="lazy">
                 </a>
-                <form action="" class="flex-none w-full ml-5 lg:ml-0 lg:w-[70%]">
+                <form action="<?php echo site_url() ?>" class="flex-none w-full ml-5 lg:ml-0 lg:w-[70%]">
                     <label for="">
                         Pesquisar
                         <input name="s" type="search" class="border-b border-cor1" title="O que você procura?">
                     </label>
                 </form>
-                <a href="" title="Login" class="flex-none w-[50px] hidden lg:block"> 
-                    Login 
+                <a href="<?php echo site_url() ?>/minha-conta" title="Entrar" class="flex-none w-[50px] hidden lg:block"> 
+                    Entrar 
                 </a>
-                <a href="" title="Favoritos" class="flex-none w-[50px] hidden lg:block">
+                <a href="<?php echo site_url() ?>/lista-de-desejos" title="lista de desejos" class="flex-none w-[50px] hidden lg:block">
                     <img src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
                 </a>
-                <a href="" title="carrinho" class="flex-none w-[50px] hidden lg:block">
+                <a href="<?php echo site_url() ?>/carrinho" title="carrinho" class="flex-none w-[50px] hidden lg:block">
                     <img src="<?php echo  $layout->getFile('/assets/images/layout/bag.svg') ?>" alt="carrinho" loading="lazy">
                 </a>
             </div>
