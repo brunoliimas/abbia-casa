@@ -52,7 +52,7 @@ $layout = new Layout();
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/gutenberg.css?id=<?php echo uniqid(); ?>">
 </head>
 
-<body class="font-agrandir <?php echo getSlug(); ?>">
+<body class="font-agrandir <?php echo getSlug(); ?> bg-[#fefdfb]">
 
     <?php wp_body_open(); ?>
 
@@ -158,7 +158,7 @@ $layout = new Layout();
                 <form action="<?php echo site_url() ?>" class="flex-none w-full ml-5 lg:ml-0 lg:w-[70%]">
                     <label for="">
                         Pesquisar
-                        <input name="s" type="search" class="border-b border-cor1" title="O que você procura?">
+                        <input name="s" type="search" class="border-b border-cor1 outline-0 bg-transparent" title="O que você procura?">
                     </label>
                 </form>
                 <a href="<?php echo site_url() ?>/minha-conta" title="Entrar" class="flex-none w-[50px] hidden lg:block">

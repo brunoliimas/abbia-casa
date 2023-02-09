@@ -140,7 +140,7 @@ $novidade = [
 <section class="container mx-auto px-4">
     <div class="columns-2 lg:columns-3 gap-4">
         <div>
-            <h2 class="font-romie text-[25px] md:text-[45px] lg:text-[60px] text-cor2">
+            <h2 class="font-romie text-[25px] md:text-[45px] lg:text-[60px] text-cor6">
                 Sac du jour
             </h2>
             <p class="text-[14px] md:text-[18px] lg:text-[24px] text-cor1 py-[40px]">
@@ -180,7 +180,7 @@ $novidade = [
             </div>
             <?php if ($index == 2) { ?>
                 <div class=" md:block">
-                    <p class="border-t-2 border-cor2 text-[14px] md:text-[18px] lg:text-[24px] text-cor1 py-[40px]">
+                    <p class="border-t-2 border-cor6 text-[14px] md:text-[18px] lg:text-[24px] text-cor1 py-[40px]">
                         Sac du jour é um artigo com o DNA absoluto da Abbia
                         Casa, que chegou de maneira despretensiosa mas com o
                         charme que procurávamos para dar o toque final.
@@ -192,8 +192,8 @@ $novidade = [
 </section>
 
 <section>
-    <div class="container mx-auto px-4 border-t-2 border-cor2 pt-[40px] mt-[40px]">
-        <h3 class="text-[25px] md:text-[45px] lg:text-[40px] text-cor2 font-romie mb-4">Decora a sua casa</h3>
+    <div class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
+        <h3 class="text-[25px] md:text-[45px] lg:text-[40px] text-cor6 font-romie mb-4">Decora a sua casa</h3>
         <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
 
             <?php foreach ($decora as $index => $prod) { ?>
@@ -228,8 +228,8 @@ $novidade = [
 </section>
 
 <section>
-    <div class="container mx-auto px-4 border-t-2 border-cor2 pt-[40px] mt-[40px]">
-        <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-cor2 font-romie mb-4">Novidades </h2>
+    <div class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
+        <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-cor6 font-romie mb-4">Novidades </h2>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <?php foreach ($novidade as $index => $prod) { ?>
                 <div class="break-inside-avoid-column text-cor1 relative">
@@ -260,15 +260,15 @@ $novidade = [
     </div>
 </section>
 
-<section class="container mx-auto px-4 mt-[40px] pt-[40px] border-t-2 border-cor2">
+<section class="container mx-auto px-4 mt-[40px] pt-[40px] border-t-2 border-cor1">
     <div class="grid grid-cols-2 gap-4">
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <h3 class="text-cor2 font-romie text-[60px] mb-4 leading-[50px]">
+                <h3 class="text-cor6 font-romie text-[60px] mb-4 leading-[50px]">
                     Art <br>
                     de vivre
                 </h3>
-                <h2 class="text-cor2 font-romie text-[24px] mb-4 border-t-2 border-cor2 pt-4">
+                <h2 class="text-cor6 font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Abbia Casa e você
                 </h2>
                 <p class="text-cor1">
@@ -283,7 +283,7 @@ $novidade = [
         </div>
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <h2 class="text-cor2 font-romie text-[24px] mb-4 border-t-2 border-cor2 pt-4">
+                <h2 class="text-cor6 font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Harmonia e fluidez
                 </h2>
                 <p class="text-cor1">
@@ -300,7 +300,7 @@ $novidade = [
         <div class="grid grid-cols-2 gap-4">
             <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-2.png'); ?>" alt="img">
             <div>
-                <h2 class="text-cor2 font-romie text-[24px] mb-4 border-t-2 border-cor2 pt-4">
+                <h2 class="text-cor6 font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Mélange
                 </h2>
                 <p class="text-cor1">
@@ -314,7 +314,7 @@ $novidade = [
         <div class="grid grid-cols-2 gap-4">
             <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-4.png'); ?>" alt="img">
             <div class="relative">
-                <h2 class="text-cor2 font-romie text-[24px] mb-4 border-t-2 border-cor2 pt-4">
+                <h2 class="text-cor6 font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Memória afetivas
                 </h2>
                 <p class="text-cor1">

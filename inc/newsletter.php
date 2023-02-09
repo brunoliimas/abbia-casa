@@ -1,6 +1,6 @@
 <?php
     $sTitle = "text-[50px] lg:text-[66px] font-romie mb-4";
-    $sInput = "border-b border-cor1 block w-full py-4";
+    $sInput = "border-b border-cor1 block w-full py-4 bg-transparent outline-0";
     $sBtn = "text-[16px] drop-shadow-xl bg-[#FFF] rounded-[8px] text-center w-[150px]  py-[8px] "
 ?>
 <section class="container mx-auto text-cor1 py-[36px]  border-t border-cor1 mt-[30px]">
@@ -22,7 +22,7 @@
             <button class="<?php echo $sBtn; ?> mt-8 block lg:hidden" type="submit">Enviar</button>
         </div>
         <div class="hidden lg:block" >
-            <button class="<?php echo $sBtn; ?> mt-[50px] ml-[50px]" type="submit">Enviar</button>
+            <button class="<?php echo $sBtn; ?> mt-[50px] ml-[50px] hover:bg-[#fdfdfd] transition-all" type="submit">Enviar</button>
         </div>
     </form>
 </section>
