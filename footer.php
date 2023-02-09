@@ -5,7 +5,7 @@
 <?php
     
     $lf = new Layout();
-    $sTitle = "text-[16px] md:text-[24px] block leading-[16px] md:leading-[24px] mb-[15px] lg:mb-20 text-cor1 font-romie";
+    $sTitle = "text-[16px] md:text-[24px] block leading-[16px] md:leading-[24px]  lg:mb-[40px] text-cor1 font-romie";
     $sT = "text-[12px] lg:text-[14px] text-cor1";    
 
 ?>
@@ -18,7 +18,7 @@
                         Newsletter
                     </h4>
                     <form action="">
-                        <input type="email" require class="bg-transparent border-b border-cor1 mb-4">
+                        <input type="email" require class="outline-0 bg-transparent border-b border-cor1 mb-4">
                         <button type="submit">Enviar</button>
                     </form>
                     <div class="flex gap-6 mt-4">
@@ -44,8 +44,8 @@
                     <p class="<?php echo $sT; ?>">
                         Saiba mais sobre nós
                     </p>
-                    <p class="<?php echo $sT; ?>">
-                        Email:
+                    <p class="mt-4 <?php echo $sT; ?>">
+                        Email: <br>
                         <a href="mailto:info@abbiacasa.com" title="enviar email">
                             info@abbiacasa.com
                         </a>
@@ -73,10 +73,10 @@
                         Termos legais <br>
                         e LGPD
                     </h>
-                    <a href="<?php echo site_url() ?>/lgpd" class="<?php echo $sT; ?>" title="Termos e condições">
+                    <a href="<?php echo site_url() ?>/lgpd" class="block <?php echo $sT; ?>" title="Termos e condições">
                         Termos e condições
                     </a>
-                    <a href="<?php echo site_url() ?>/politica-de-venda" class="<?php echo $sT; ?>" title="Politica de venda">
+                    <a href="<?php echo site_url() ?>/politica-de-venda" class="block <?php echo $sT; ?>" title="Politica de venda">
                         Politica de venda
                     </a>
                     <span class="grid grid-cols-2 lg:grid-cols-4 mt-4">

@@ -56,7 +56,7 @@ $layout = new Layout();
 
     <?php wp_body_open(); ?>
 
-    <nav id="js-nav-pop" class="fixed top-0 left-[-300px] h-full bg-cor3 p-4 w-[270px] z-10 transition-all duration-300 ease-in-out">
+    <nav id="js-nav-pop" class="fixed top-0 left-[-40vw] w-[35vw] h-full bg-cor3 p-4  z-10 transition-all duration-300 ease-in-out">
         <span>
             <img class="w-[40px] md:hidden" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
         </span>
@@ -101,7 +101,7 @@ $layout = new Layout();
                 </ul>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/colabs" title="Colabs">Colabs</a>
+                <a class="font-romie font-light text-[33px]" href="<?php echo site_url() ?>/product-category/colabs" title="Colabs">Colabs</a>
             </li>
             <li>
                 <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/novidades" title="Novidades">Novidades</a>
@@ -110,7 +110,7 @@ $layout = new Layout();
                 <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/art-de-vivre-abbia-casa" title="A curadoria">A curadoria</a>
             </li>
             <li>
-                <a class=" text-[18px]" href="#" title="+ Infos">+ Infos </a>
+                <a class=" text-[18px] font-light" href="#" title="+ Infos">+ Infos </a>
                 <ul class="hidden">
                     <li>
                         <a href="<?php echo site_url() ?>/contato#newsletter" title="Newsletter">Newsletter</a>
@@ -150,7 +150,7 @@ $layout = new Layout();
     </nav>
 
     <header>
-        <div class="container mx-auto">
+        <div class="block px-4">
             <div class="flex flex-row justify-between items-center h-[70px]">
                 <a id="js-nav-ico" href="javascript:void(0)" title="menu site" class="flex-none w-[50px] ml-5 lg:ml-0">
                     <img src="<?php echo $layout->getFile('/assets/images/layout/menu.svg') ?>" alt="menu" loading="lazy">
