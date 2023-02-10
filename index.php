@@ -132,7 +132,7 @@ $novidade = [
 
 <section class="container mx-auto relative my-[60px] ">
     <img class="w-full" loading="lazy" src="<?php echo $l->getFile('/assets/images/hero-section/novidade.png'); ?>" alt="Novidades">
-    <a class="rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[285px] py-[15px] text-cor1 font-light text-[30px] absolute top-[50%] left-[50%] bg-white" href="" title="Novidades">
+    <a class="rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[285px] py-[15px] text-cor1 font-light text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#fdfdfd] transition-all" href="" title="Novidades">
         Novidades
     </a>
 </section>
@@ -149,7 +149,7 @@ $novidade = [
                 da beleza e do lifestyle. <br>
                 Mas com alguns elementos surpresa!
             </p>
-            <a class="hidden md:inline-block text-cor1 bg-white drop-shadow-lg rounded-[8px] px-8 py-2 mb-4 " href="" title="Conhece">
+            <a class="hidden md:inline-block text-cor1 bg-white drop-shadow-lg rounded-[8px] px-8 py-2 mb-4 hover:bg-[#fdfdfd] transition-all" href="" title="Conhece">
                 Conhece
             </a>
         </div>
@@ -174,7 +174,7 @@ $novidade = [
                 <span class="block text-[18px]">
                     <?php echo $prod["price"]; ?>
                 </span>
-                <a class="text-[18px] font-light text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px]" href="" title="Adicionnar">
+                <a class="text-[18px] font-light text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
                     Adicionnar
                 </a>
             </div>
@@ -215,7 +215,7 @@ $novidade = [
                     <span class="block text-[18px]">
                         <?php echo $prod["price"]; ?>
                     </span>
-                    <a class="text-[18px] font-light text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px]" href="" title="Adicionnar">
+                    <a class="text-[18px] font-light text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
                         Adicionnar
                     </a>
                     <p class="font-light">
@@ -251,7 +251,7 @@ $novidade = [
                     <span class="block text-[18px]">
                         <?php echo $prod["price"]; ?>
                     </span>
-                    <a class="text-[18px] text-cor1 font-light bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px]" href="" title="Adicionnar">
+                    <a class="text-[18px] text-cor1 font-light bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
                         Adicionnar
                     </a>
                 </div>
@@ -322,7 +322,7 @@ $novidade = [
                     Sensações táteis, olfativas, visuais são de fato os
                     que impulsionam nossa paixão pelo design e bem estar.
                 </p>
-                <a class="absolute bottom-4 left-0 text-[18px] text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px]" href="" title="Conheça">
+                <a class="absolute bottom-4 left-0 text-[18px] text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Conheça">
                     Conheça
                 </a>
             </div>
