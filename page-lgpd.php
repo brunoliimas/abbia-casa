@@ -6,7 +6,7 @@ $l = new Layout();
 ?>
 
 <article>
-    <div class="w-[90vw] lg:w-[950px] mx-auto">
+    <div class="w-[90vw] mx-auto">
         <h1 class="block text-center font-romie text-cor1 text-[55px] md:text-[66px] mb-[40px] lg:mb-[80px]"> 
             <?php echo $page->title; ?> 
         </h1>

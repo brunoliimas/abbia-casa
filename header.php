@@ -19,6 +19,9 @@ $layout = new Layout();
         tailwind.config = {
             theme: {
                 extend: {
+                    backgroundImage: {
+                        'plus': "url('<?php echo get_template_directory_uri(); ?>/assets/images/icons/plus.svg')",
+                    },
                     colors: {
                         cor1: '#434445',
                         cor2: '#CEAF94',

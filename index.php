@@ -104,7 +104,7 @@ $novidade = [
 <?php get_header(); ?>
 
 <section>
-    <h1 class="text-center font-light text-[26px] md:text-[50px] lg:text-[66px]">
+    <h1 class="text-center lg:leading-[80px] font-romie text-[26px] md:text-[50px] lg:text-[66px]">
         Cuidados diáros, <br>
         interior e curiosidades
     </h1>
@@ -140,10 +140,10 @@ $novidade = [
 <section class="container mx-auto px-4">
     <div class="columns-2 lg:columns-3 gap-4">
         <div>
-            <h2 class="font-light text-[25px] md:text-[45px] lg:text-[60px] text-[#EE705A]">
+            <h2 class="font-romie lg:leading-[66px] text-[25px] md:text-[45px] lg:text-[60px] text-[#EE705A]">
                 Sac du jour
             </h2>
-            <p class="text-[14px] md:text-[18px] lg:text-[24px] text-cor1 py-[40px]">
+            <p class="text-[14px] lg:leading-[18px] font-agrandir md:text-[18px] lg:text-[14px] text-cor1 py-[40px]">
                 Um conjunto de produtos edxclusivo que
                 atende aos ambientes da casa, do trabalho,
                 da beleza e do lifestyle. <br>
@@ -264,11 +264,11 @@ $novidade = [
     <div class="grid grid-cols-2 gap-4">
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <h3 class="text-[#EE705A] font-light text-[60px] mb-4 leading-[50px]">
+                <h3 class="text-[#EE705A] font-light text-[60px] mb-4 lg:leading-[50px]">
                     Art <br>
                     de vivre
                 </h3>
-                <h2 class="text-[#EE705A] font-light text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] lg:leading-[29px] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Abbia Casa e você
                 </h2>
                 <p class="text-cor1 font-light">

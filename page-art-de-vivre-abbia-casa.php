@@ -17,7 +17,7 @@
                     <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/cura-1.png') ?>" alt="art" loading="lazy">
                 </div>
                 <div class="lg:px-[120px]">
-                    <h2>Abbia Casa e você</h2>
+                    <h2 class="text-[#EE705A]">Abbia Casa e você</h2>
                     <p>
                         A Abbia Casa traz consigo o conceito de como a beleza,
                         harmonia e equilíbrio influenciam no seu bem estar.

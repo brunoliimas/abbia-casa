@@ -8,7 +8,7 @@ function short_summary($atributos, $content = null)
     $payload = shortcode_atts($default, $atributos);
     $content = do_shortcode($content);
 
-    $html = "<details class=\"border-t-[1px] py-4 border-cor1  \">";
+    $html = "<details class=\"border-t-[1px] py-4 border-cor1 bg-plus bg-no-repeat bg-right bg-[right_cener] w-full\">";
     $html .= "    <summary class=\"text-[20px] list-none \">" . $payload["title"] . "</summary>";
     $html .= "    " . $content;
     $html .= "</details>";

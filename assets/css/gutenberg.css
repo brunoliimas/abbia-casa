@@ -1,7 +1,7 @@
 .custom-post h1,
 .custom-post h2,
 .custom-post h3 {
-    color: var(--cor2);
+    color: #EE705A;
     font-family: 'romie';
     font-style: normal;
     font-weight: 400;
@@ -44,9 +44,10 @@
     .custom-post h1,
     .custom-post h2,
     .custom-post h3 {
-        font-size: 66px;
-        line-height: 79px;
+        font-size: 60px;
+        line-height: 66px;
         letter-spacing: 0.065em;
+        margin-bottom: 40px;
     }
 
     .custom-post p {
@@ -54,5 +55,6 @@
         line-height: 31px;
         letter-spacing: 0.065em;
         margin-bottom: 31px;
+        font-weight: lighter;
     }
 }
