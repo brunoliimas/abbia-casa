@@ -104,7 +104,7 @@ $layout = new Layout();
                 </ul>
             </li>
             <li>
-                <a class="font-romie font-light text-[33px]" href="<?php echo site_url() ?>/product-category/colabs" title="Colabs">Colabs</a>
+                <a class="font-romie font-face text-[33px]" href="<?php echo site_url() ?>/product-category/colabs" title="Colabs">Colabs</a>
             </li>
             <li>
                 <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/novidades" title="Novidades">Novidades</a>
@@ -113,7 +113,7 @@ $layout = new Layout();
                 <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/art-de-vivre-abbia-casa" title="A curadoria">A curadoria</a>
             </li>
             <li>
-                <a class=" text-[18px] font-light" href="#" title="+ Infos">+ Infos </a>
+                <a class=" text-[18px] font-face" href="#" title="+ Infos">+ Infos </a>
                 <ul class="hidden">
                     <li>
                         <a href="<?php echo site_url() ?>/contato#newsletter" title="Newsletter">Newsletter</a>

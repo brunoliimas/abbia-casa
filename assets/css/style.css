@@ -6,3 +6,12 @@
     --cor5: #F8FFDE;
     --cor6: #EE705A;
 }
+
+@font-face {
+    font-family: 'Agrandir';
+    src: url('Agrandir-LightC2.woff2') format('woff2'),
+        url('Agrandir-LightC2.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

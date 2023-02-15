@@ -115,7 +115,7 @@ $novidade = [
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
         <?php foreach ($cats as $cat) { ?>
             <div>
-                <a class="text-[18px] lg:text-[24px] text-center block font-light" href="<?php echo $cat["link"] ?>" title="<?php echo $cat["title"] ?>">
+                <a class="text-[18px] lg:text-[24px] text-center block font-face" href="<?php echo $cat["link"] ?>" title="<?php echo $cat["title"] ?>">
                     <?php echo $cat["title"] ?>
                 </a>
                 <span class="mt-[4px] mb-[16px] block w-[1px] mx-auto bg-cor1 h-[23px] "></span>
@@ -132,7 +132,7 @@ $novidade = [
 
 <section class="container mx-auto relative my-[60px] ">
     <img class="w-full" loading="lazy" src="<?php echo $l->getFile('/assets/images/hero-section/novidade.png'); ?>" alt="Novidades">
-    <a class="rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[285px] py-[15px] text-cor1 font-light text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#fdfdfd] transition-all" href="" title="Novidades">
+    <a class="rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[285px] py-[15px] text-cor1 font-face text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#fdfdfd] transition-all" href="" title="Novidades">
         Novidades
     </a>
 </section>
@@ -157,13 +157,13 @@ $novidade = [
         <?php foreach ($sacProd as $index => $prod) { ?>
             <div class="break-inside-avoid-column text-cor1 relative">
                 <?php if ($prod["new"]) { ?>
-                    <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-light">Novo</span>
+                    <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
                 <?php } ?>
                 <a href="" title="<?php echo $prod["title"]; ?>">
                     <img class="w-full" loading="lazy" src="<?php echo $l->getFile($prod["image"]); ?>" alt="<?php echo $prod["title"]; ?>">
                 </a>
                 <div class="flex justify-between items-center pt-4">
-                    <span class="font-light text-[24px]">
+                    <span class="font-face text-[24px]">
                         <?php echo $prod["title"]; ?>
                     </span>
                     <a href="" title="Adicionar Favorito">
@@ -174,7 +174,7 @@ $novidade = [
                 <span class="block text-[18px]">
                     <?php echo $prod["price"]; ?>
                 </span>
-                <a class="text-[18px] font-light text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
+                <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
                     Adicionnar
                 </a>
             </div>
@@ -193,19 +193,19 @@ $novidade = [
 
 <section>
     <div class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
-        <h3 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-light mb-4">Decora a sua casa</h3>
+        <h3 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-face mb-4">Decora a sua casa</h3>
         <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
 
             <?php foreach ($decora as $index => $prod) { ?>
                 <div class="break-inside-avoid-column text-cor1 relative">
                     <?php if ($prod["new"]) { ?>
-                        <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-light">Novo</span>
+                        <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
                     <?php } ?>
                     <a href="" title="<?php echo $prod["title"]; ?>">
                         <img class="w-full" loading="lazy" src="<?php echo $l->getFile($prod["image"]); ?>" alt="<?php echo $prod["title"]; ?>">
                     </a>
                     <div class="flex justify-between items-center pt-4">
-                        <span class="font-light text-[24px]">
+                        <span class="font-face text-[24px]">
                             <?php echo $prod["title"]; ?>
                         </span>
                         <a href="" title="Adicionar Favorito">
@@ -215,10 +215,10 @@ $novidade = [
                     <span class="block text-[18px]">
                         <?php echo $prod["price"]; ?>
                     </span>
-                    <a class="text-[18px] font-light text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
+                    <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
                         Adicionnar
                     </a>
-                    <p class="font-light">
+                    <p class="font-face">
                         <?php echo $prod["description"]; ?>
                     </p>
                 </div>
@@ -229,18 +229,18 @@ $novidade = [
 
 <section>
     <div class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
-        <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-light mb-4">Novidades </h2>
+        <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-face mb-4">Novidades </h2>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <?php foreach ($novidade as $index => $prod) { ?>
                 <div class="break-inside-avoid-column text-cor1 relative">
                     <?php if ($prod["new"]) { ?>
-                        <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-light">Novo</span>
+                        <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
                     <?php } ?>
                     <a href="" title="<?php echo $prod["title"]; ?>">
                         <img class="w-full" loading="lazy" src="<?php echo $l->getFile($prod["image"]); ?>" alt="<?php echo $prod["title"]; ?>">
                     </a>
                     <div class="flex justify-between items-center pt-4">
-                        <span class="font-light text-[24px]">
+                        <span class="font-face text-[24px]">
                             <?php echo $prod["title"]; ?>
                         </span>
                         <a href="" title="Adicionar Favorito">
@@ -251,7 +251,7 @@ $novidade = [
                     <span class="block text-[18px]">
                         <?php echo $prod["price"]; ?>
                     </span>
-                    <a class="text-[18px] text-cor1 font-light bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
+                    <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
                         Adicionnar
                     </a>
                 </div>
@@ -264,14 +264,14 @@ $novidade = [
     <div class="grid grid-cols-2 gap-4">
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <h3 class="text-[#EE705A] font-light text-[60px] mb-4 lg:leading-[50px]">
+                <h3 class="text-[#EE705A] font-face text-[60px] mb-4 lg:leading-[50px]">
                     Art <br>
                     de vivre
                 </h3>
                 <h2 class="text-[#EE705A] lg:leading-[29px] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Abbia Casa e você
                 </h2>
-                <p class="text-cor1 font-light">
+                <p class="text-cor1 font-face">
                     A Abbia Casa traz consigo o conceito de como a beleza,
                     harmonia e equilíbrio influenciam no seu bem estar.
                     Assim apresentamos novas maneiras de fazer as coisas
@@ -283,14 +283,14 @@ $novidade = [
         </div>
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <h2 class="text-[#EE705A] font-light text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-face text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Harmonia e fluidez
                 </h2>
-                <p class="text-cor1 font-light">
+                <p class="text-cor1 font-face">
                     Todos os produtos recebem um estudo delicado e cuidadoso,
                     esse savoir faire é o alicerce da Curadoria Abbia Casa.
                 </p>
-                <p class="text-cor1 font-light">
+                <p class="text-cor1 font-face">
                     Tudo pensado para atrair a fluidez benéfica da Natureza.
                 </p>
                 <img class="w-[120px] mx-auto mt-4" loading="lazy" src="<?php echo $l->getFile('/assets/logo/AbbiaCasa-01.svg'); ?>" alt="Abbia Casa">
@@ -300,10 +300,10 @@ $novidade = [
         <div class="grid grid-cols-2 gap-4">
             <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-2.png'); ?>" alt="img">
             <div>
-                <h2 class="text-[#EE705A] font-light text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-face text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Mélange
                 </h2>
-                <p class="text-cor1 font-light">
+                <p class="text-cor1 font-face">
                     Misturinhas, é como toda pessoa conectada ao lar faz
                     com as peças que mais gosta. Adaptar um estilo a outro e
                     trazer mais humor, charme e toque pessoal aos ambientes é
@@ -314,10 +314,10 @@ $novidade = [
         <div class="grid grid-cols-2 gap-4">
             <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-4.png'); ?>" alt="img">
             <div class="relative">
-                <h2 class="text-[#EE705A] font-light text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-face text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Memória afetivas
                 </h2>
-                <p class="text-cor1 font-light">
+                <p class="text-cor1 font-face">
                     Nada como chegar em casa e se sentir acolhido.
                     Sensações táteis, olfativas, visuais são de fato os
                     que impulsionam nossa paixão pelo design e bem estar.

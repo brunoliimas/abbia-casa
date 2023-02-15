@@ -10,7 +10,7 @@
                 Click para <br />
                 se inspirar
             </h3>
-            <small class="text-[14px] lg:text-[18px] font-light">
+            <small class="text-[14px] lg:text-[18px] font-face">
                 Assine a nossa newsletter <br />
                 e não perca nenhuma novidade.
             </small>
@@ -19,7 +19,7 @@
             <input class="<?php echo $sInput; ?>" type="email" placeholder="EMAIL" required>
             <input class="<?php echo $sInput; ?>" type="text" placeholder="ASSUNTO" required>
             <input class="<?php echo $sInput; ?>" type="text" placeholder="MENSAGEM" required>
-            <button class="<?php echo $sBtn; ?> mt-8 block lg:hidden font-light" type="submit">Enviar</button>
+            <button class="<?php echo $sBtn; ?> mt-8 block lg:hidden font-face" type="submit">Enviar</button>
         </div>
         <div class="hidden lg:block" >
             <button class="<?php echo $sBtn; ?> mt-[50px] ml-[50px] hover:bg-[#fdfdfd] transition-all" type="submit">Enviar</button>
