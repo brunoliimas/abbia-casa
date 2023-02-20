@@ -4,22 +4,22 @@ $l = new Layout();
 $cats = [
     [
         "title" => "Beauté",
-        "link" => "",
+        "link" => $l->site . "/categoria-produto/beaute/",
         "img" => $l->getFile('/assets/images/home-category/beaute.png'),
     ],
     [
         "title" => "Casa",
-        "link" => "",
+        "link" => $l->site . "/categoria-produto/casa/",
         "img" => $l->getFile('/assets/images/home-category/casa.png'),
     ],
     [
         "title" => "Acessorios",
-        "link" => "",
+        "link" => $l->site . "/categoria-produto/acessorios/",
         "img" => $l->getFile('/assets/images/home-category/beaute.png'),
     ],
     [
         "title" => "Colabs",
-        "link" => "",
+        "link" => $l->site . "/categoria-produto/colabs/",
         "img" => $l->getFile('/assets/images/home-category/colab.png'),
     ],
 ];
@@ -132,7 +132,7 @@ $novidade = [
 
 <section class="container mx-auto relative my-[60px] ">
     <img class="w-full" loading="lazy" src="<?php echo $l->getFile('/assets/images/hero-section/novidade.png'); ?>" alt="Novidades">
-    <a class="rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[285px] py-[15px] text-cor1 font-face text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#fdfdfd] transition-all" href="" title="Novidades">
+    <a class="rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[285px] py-[15px] text-cor1 font-face text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#fdfdfd] transition-all" href="<?php echo $l->site ?>/categoria-produto/novidade/" title="Novidades">
         Novidades
     </a>
 </section>
@@ -328,6 +328,6 @@ $novidade = [
             </div>
         </div>
     </div>
-</section> 
+</section>
 
 <?php get_footer(); ?>
