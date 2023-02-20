@@ -14,7 +14,7 @@ $layout = new Layout();
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/fonts.css">
-    <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -53,15 +53,16 @@ $layout = new Layout();
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css?id=<?php echo uniqid(); ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/woocommerce.css?id=<?php echo uniqid(); ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/gutenberg.css?id=<?php echo uniqid(); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>">
 </head>
 
 <body class="font-agrandir <?php echo getSlug(); ?> bg-[#fefdfb]">
 
     <?php wp_body_open(); ?>
 
-    <nav id="js-nav-pop" class="fixed top-0 left-[-40vw] w-[35vw] h-full bg-cor3 p-4  z-10 transition-all duration-300 ease-in-out">
+    <nav id="js-nav-pop" class="fixed top-0 left-[-80vw] w-[75vw] lg:left-[-40vw] lg:w-[35vw] h-[100vh] lg:h-full bg-cor3 p-4  z-10 transition-all duration-300 ease-in-out">
         <span>
-            <img class="w-[40px] md:hidden" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
+            <img onclick="offMenu()" class="w-[40px] md:hidden" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
         </span>
         <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
         <ul>

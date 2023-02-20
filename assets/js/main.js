@@ -34,7 +34,14 @@
                 $navPop.classList.remove('left-0')
             }, 100)
         })
-    }
+    }    
+})();
 
-    
-})()
+
+globalThis.offMenu = () => {
+
+    let $navPop = document.querySelector("#js-nav-pop")
+    if($navPop) {
+        $navPop.classList.remove('left-0')
+    }
+}
