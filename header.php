@@ -14,7 +14,7 @@ $layout = new Layout();
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/fonts.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -147,7 +147,12 @@ $layout = new Layout();
             <a href="<?php echo site_url() ?>/lista-de-desejos" title="lista de desejos">
                 <img class="w-[27px]" src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
             </a>
-            <a href="<?php echo site_url() ?>/carrinho" title="Carrinho">
+            <a href="<?php echo site_url() ?>/carrinho" title="Carrinho" class="relative">
+                <?php if (WC()->cart->get_cart_contents_count()) { ?>
+                    <div class="block w-[18px] h-[18px] rounded-full text-white text-[9px] leading-[22px] bg-[#C00] text-center absolute right-4 top-0">
+                        <?php echo WC()->cart->get_cart_contents_count() ?>
+                    </div>
+                <?php } ?>
                 <img class="w-[27px]" src="<?php echo  $layout->getFile('/assets/images/layout/bag.svg') ?>" alt="carrinho" loading="lazy">
             </a>
         </div>
@@ -171,7 +176,12 @@ $layout = new Layout();
                 <a href="<?php echo site_url() ?>/lista-de-desejos" title="lista de desejos" class="flex-none w-[50px] hidden lg:block">
                     <img src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
                 </a>
-                <a href="<?php echo site_url() ?>/carrinho" title="carrinho" class="flex-none w-[50px] hidden lg:block">
+                <a href="<?php echo site_url() ?>/carrinho" title="carrinho" class="relative flex-none w-[50px] hidden lg:block">
+                    <?php if (WC()->cart->get_cart_contents_count()) { ?>
+                        <div class="block w-[18px] h-[18px] rounded-full text-white text-[9px] leading-[22px] bg-[#C00] text-center absolute right-4 top-0">
+                            <?php echo WC()->cart->get_cart_contents_count() ?>
+                        </div>
+                    <?php } ?>
                     <img src="<?php echo  $layout->getFile('/assets/images/layout/bag.svg') ?>" alt="carrinho" loading="lazy">
                 </a>
             </div>

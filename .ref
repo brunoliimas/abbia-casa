@@ -6,3 +6,6 @@ https://www.businessbloomer.com/woocommerce-easily-get-product-info-title-sku-de
 short code add list desejo
 
 [ti_wishlists_addtowishlist]
+
+short code 
+[ti_wishlists_addtowishlist product_id="70" variation_id="0"]

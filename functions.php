@@ -2,6 +2,8 @@
 
 include __DIR__ . "/classes/Layout.php";
 include __DIR__ . "/classes/Page.php";
+include __DIR__ . "/classes/Category.php";
+include __DIR__ . "/classes/Product.php";
 include __DIR__ . "/inc/helps.php";
 include __DIR__ . "/inc/short_summary.php";
 include __DIR__ . "/inc/theme_mod.php";

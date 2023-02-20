@@ -1,6 +1,7 @@
 <?php /* Template Name: Home */ ?>
 <?php
 $l = new Layout();
+$cat = new Product();
 $cats = [
     [
         "title" => "Beauté",
@@ -24,80 +25,17 @@ $cats = [
     ],
 ];
 
-$sacProd = [
-    [
-        "title" => "Sac Lundi",
-        "new" => true,
-        "price" => "R$ 620,00",
-        "image" => "/assets/images/home-product/prod-3.png ",
-    ],
-    [
-        "title" => "Sac Dimanche",
-        "new" => false,
-        "price" => "R$ 620,00",
-        "image" => "/assets/images/home-product/prod-1.png",
-    ],
-    [
-        "title" => "Sac Dimanche",
-        "new" => true,
-        "price" => "R$ 620,00",
-        "image" => "/assets/images/home-product/prod-2.png",
-    ],
-    [
-        "title" => "Sac Dimanche",
-        "new" => false,
-        "price" => "R$ 620,00",
-        "image" => "/assets/images/home-product/prod-4.png",
-    ],
-];
+// show 4
+$sacProd =  $cat->productsByCategorySlug('beaute');
+$sacProd =  array_splice($sacProd,0, 5);
 
-$decora = [
-    [
-        "title" => "Sac Dimanche",
-        "new" => false,
-        "price" => "R$ 620,00",
-        "image" => "/assets/images/home-decorar/dec-3.png",
-        "description" => "Descritivo do produtoDescritivo do produtoDescritivo do produtoDescritivo do produtoDescritivo do produto",
-    ],
-    [
-        "title" => "Sac Dimanche",
-        "new" => false,
-        "price" => "R$ 620,00",
-        "image" => "/assets/images/home-decorar/dec-1.png",
-        "description" => "Descritivo do produtoDescritivo do produtoDescritivo do produtoDescritivo do produtoDescritivo do produto",
-    ],
-    [
-        "title" => "Sac Dimanche",
-        "new" => false,
-        "price" => "R$ 620,00",
-        "image" => "/assets/images/home-decorar/dec-2.png",
-        "description" => "Descritivo do produtoDescritivo do produtoDescritivo do produtoDescritivo do produtoDescritivo do produto",
-    ],
-];
+// show 3
+$decora = $cat->productsByCategorySlug('acessorios-2');
+$decora =  array_splice($decora,0, 3);
 
-$novidade = [
-    [
-        "title" => "Sac Dimanche",
-        "image" => "/assets/images/home-new-prod/prod-1.png",
-        "price" => "R$ 620,00",
-    ],
-    [
-        "title" => "Sac Dimanche",
-        "image" => "/assets/images/home-new-prod/prod-2.png",
-        "price" => "R$ 620,00",
-    ],
-    [
-        "title" => "Sac Dimanche",
-        "image" => "/assets/images/home-new-prod/prod-3.png",
-        "price" => "R$ 620,00",
-    ],
-    [
-        "title" => "Sac Dimanche",
-        "image" => "/assets/images/home-new-prod/prod-4.png",
-        "price" => "R$ 620,00",
-    ],
-];
-
+// show 4
+$novidade = $cat->productsByCategorySlug('novidade');
+$novidade =  array_splice($novidade,0, 4);
 
 ?>
 
@@ -149,7 +87,7 @@ $novidade = [
                 da beleza e do lifestyle. <br>
                 Mas com alguns elementos surpresa!
             </p>
-            <a class="hidden md:inline-block text-cor1 bg-white drop-shadow-lg rounded-[8px] px-8 py-2 mb-4 hover:bg-[#fdfdfd] transition-all" href="" title="Conhece">
+            <a class="hidden md:inline-block text-cor1 bg-white drop-shadow-lg rounded-[8px] px-8 py-2 mb-4 hover:bg-[#fdfdfd] transition-all" href="<?php echo site_url() ?>/quem-somos/" title="Conhece">
                 Conhece
             </a>
         </div>
@@ -159,22 +97,19 @@ $novidade = [
                 <?php if ($prod["new"]) { ?>
                     <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
                 <?php } ?>
-                <a href="" title="<?php echo $prod["title"]; ?>">
-                    <img class="w-full" loading="lazy" src="<?php echo $l->getFile($prod["image"]); ?>" alt="<?php echo $prod["title"]; ?>">
+                <a href="<?php echo $prod["linkSingle"]?>" title="<?php echo $prod["title"]; ?>">
+                    <img class="w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                 </a>
                 <div class="flex justify-between items-center pt-4">
                     <span class="font-face text-[24px]">
                         <?php echo $prod["title"]; ?>
                     </span>
-                    <a href="" title="Adicionar Favorito">
-                        <img loading="lazy" src="<?php echo $l->getFile('/assets/images/layout/heart.svg'); ?>" alt="Adicionar Favorito">
-                    </a>
-
+                    <?php echo $prod["whishList"]; ?>
                 </div>
                 <span class="block text-[18px]">
                     <?php echo $prod["price"]; ?>
                 </span>
-                <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
+                <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
                     Adicionnar
                 </a>
             </div>
@@ -201,21 +136,19 @@ $novidade = [
                     <?php if ($prod["new"]) { ?>
                         <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
                     <?php } ?>
-                    <a href="" title="<?php echo $prod["title"]; ?>">
-                        <img class="w-full" loading="lazy" src="<?php echo $l->getFile($prod["image"]); ?>" alt="<?php echo $prod["title"]; ?>">
+                    <a href="<?php echo $prod["linkSingle"]; ?>" title="<?php echo $prod["title"]; ?>">
+                        <img class="w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                     </a>
                     <div class="flex justify-between items-center pt-4">
                         <span class="font-face text-[24px]">
                             <?php echo $prod["title"]; ?>
                         </span>
-                        <a href="" title="Adicionar Favorito">
-                            <img loading="lazy" src="<?php echo $l->getFile('/assets/images/layout/heart.svg'); ?>" alt="Adicionar Favorito">
-                        </a>
+                        <?php echo $prod["whishList"]; ?>
                     </div>
                     <span class="block text-[18px]">
                         <?php echo $prod["price"]; ?>
                     </span>
-                    <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
+                    <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
                         Adicionnar
                     </a>
                     <p class="font-face">
@@ -236,22 +169,19 @@ $novidade = [
                     <?php if ($prod["new"]) { ?>
                         <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
                     <?php } ?>
-                    <a href="" title="<?php echo $prod["title"]; ?>">
-                        <img class="w-full" loading="lazy" src="<?php echo $l->getFile($prod["image"]); ?>" alt="<?php echo $prod["title"]; ?>">
+                    <a href="<?php echo $prod["linkSingle"]; ?>" title="<?php echo $prod["title"]; ?>">
+                        <img class="w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                     </a>
                     <div class="flex justify-between items-center pt-4">
                         <span class="font-face text-[24px]">
                             <?php echo $prod["title"]; ?>
                         </span>
-                        <a href="" title="Adicionar Favorito">
-                            <img loading="lazy" src="<?php echo $l->getFile('/assets/images/layout/heart.svg'); ?>" alt="Adicionar Favorito">
-                        </a>
-
+                        <?php echo $prod["whishList"]; ?>
                     </div>
                     <span class="block text-[18px]">
                         <?php echo $prod["price"]; ?>
                     </span>
-                    <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="" title="Adicionnar">
+                    <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
                         Adicionnar
                     </a>
                 </div>
