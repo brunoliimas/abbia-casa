@@ -49,7 +49,7 @@ $layout = new Layout();
         }
     </script>
     <?php wp_head(); ?>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js" type="module" defer></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js" defer></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css?id=<?php echo uniqid(); ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/woocommerce.css?id=<?php echo uniqid(); ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/gutenberg.css?id=<?php echo uniqid(); ?>">

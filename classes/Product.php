@@ -40,8 +40,12 @@ class Product
                 "linkSingle" => get_permalink($p->get_id()),
                 "whishList" => do_shortcode("[ti_wishlists_addtowishlist product_id=\"" . $p->get_id() . "\" variation_id=\"0\"]"),
                 "addToCart" => do_shortcode("[add_to_cart_url id=\"".$p->get_id()."\"]"),
-                "inStock" => $p->get_stock_status()
+                "inStock" => $p->get_stock_status(),
+                "price_regular" => $p->get_regular_price(),
+                "sale" => intval( (($p->get_price() * 100) / $p->get_regular_price()) - 100 ),
+
             ];
         }, $listProductObject);
     }
 }
+
