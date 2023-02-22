@@ -25,6 +25,16 @@ class Product
         ));
     }
 
+    function sale($regular, $discount)
+    {
+        // "sale" => intval( (($p->get_price() * 100) / $p->get_regular_price()) - 100 ) ?? 0,
+
+        if ($regular != $discount) {
+            return intval((($discount * 100) / $regular) - 100);
+        }
+        return 0;
+    }
+
     function porterProduct($listProductObject)
     {
         $categoryId = $this->getIdCategoryBySlug('novidade');
@@ -39,13 +49,12 @@ class Product
                 "description" => $p->get_short_description(),
                 "linkSingle" => get_permalink($p->get_id()),
                 "whishList" => do_shortcode("[ti_wishlists_addtowishlist product_id=\"" . $p->get_id() . "\" variation_id=\"0\"]"),
-                "addToCart" => do_shortcode("[add_to_cart_url id=\"".$p->get_id()."\"]"),
+                "addToCart" => do_shortcode("[add_to_cart_url id=\"" . $p->get_id() . "\"]"),
                 "inStock" => $p->get_stock_status(),
                 "price_regular" => $p->get_regular_price(),
-                // "sale" => intval( (($p->get_price() * 100) / $p->get_regular_price()) - 100 ) ?? 0,
+                "sale" => $this->sale($p->get_regular_price(), $p->get_price()),
 
             ];
         }, $listProductObject);
     }
 }
-
