@@ -26,16 +26,19 @@ $cats = [
 ];
 
 // show 4
-$sacProd =  $cat->productsByCategorySlug('beaute');
-$sacProd =  array_splice($sacProd,0, 5);
+// $sacProd =  $cat->productsByCategorySlug('beaute');
+// $sacProd =  array_splice($sacProd,0, 5);
+$sacProd =  [];
 
 // show 3
-$decora = $cat->productsByCategorySlug('acessorios-2');
-$decora =  array_splice($decora,0, 3);
+// $decora = $cat->productsByCategorySlug('acessorios-2');
+// $decora =  array_splice($decora,0, 3);
+$decora =  [];
 
 // show 4
-$novidade = $cat->productsByCategorySlug('novidade');
-$novidade =  array_splice($novidade,0, 4);
+// $novidade = $cat->productsByCategorySlug('novidade');
+// $novidade =  array_splice($novidade,0, 4);
+$novidade =  [];
 
 ?>
 
