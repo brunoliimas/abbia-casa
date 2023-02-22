@@ -38,7 +38,7 @@ class Product
                 "image" => get_the_post_thumbnail_url($p->get_id()),
                 "description" => $p->get_short_description(),
                 "linkSingle" => get_permalink($p->get_id()),
-                "whishList" => do_shortcode("[ti_wishlists_addtowishlist product_id=\"" . $p->get_id() . "\" variation_id=\"0\"]"),
+                // "whishList" => do_shortcode("[ti_wishlists_addtowishlist product_id=\"" . $p->get_id() . "\" variation_id=\"0\"]"),
                 "addToCart" => do_shortcode("[add_to_cart_url id=\"".$p->get_id()."\"]"),
                 "inStock" => $p->get_stock_status(),
                 "price_regular" => $p->get_regular_price(),
