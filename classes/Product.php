@@ -33,7 +33,7 @@ class Product
                 "ID" => $p->get_id(),
                 "title" => $p->get_name(),
                 "slug" => $p->get_slug(),
-                // "new" => in_array($categoryId, $p->get_category_ids()),
+                "new" => in_array($categoryId, $p->get_category_ids()),
                 "price" => $p->get_price(),
                 "image" => get_the_post_thumbnail_url($p->get_id()),
                 "description" => $p->get_short_description(),
@@ -42,7 +42,7 @@ class Product
                 "addToCart" => do_shortcode("[add_to_cart_url id=\"".$p->get_id()."\"]"),
                 "inStock" => $p->get_stock_status(),
                 "price_regular" => $p->get_regular_price(),
-                "sale" => intval( (($p->get_price() * 100) / $p->get_regular_price()) - 100 ),
+                "sale" => intval( (($p->get_price() * 100) / $p->get_regular_price()) - 100 ) ?? 0,
 
             ];
         }, $listProductObject);
