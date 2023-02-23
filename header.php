@@ -56,7 +56,7 @@ $layout = new Layout();
     <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>">
 </head>
 
-<body class="font-agrandir <?php echo getSlug(); ?> bg-[#fefdfb]">
+<body class="font-agrandir <?php echo getSlug(); ?> bg-[#fefdfb] overflow-x-hidden w-[100vw]">
 
     <?php wp_body_open(); ?>
 
@@ -64,7 +64,9 @@ $layout = new Layout();
         <span>
             <img onclick="offMenu()" class="w-[40px] md:hidden" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
         </span>
-        <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
+        <a href="<?php echo site_url() ?>" title="Abbia Casa">
+            <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
+        </a>
         <ul>
             <li>
                 <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/casa" title="Casa">Casa</a>
@@ -170,19 +172,19 @@ $layout = new Layout();
                         <input name="s" type="search" class="border-b border-cor1 outline-0 bg-transparent" title="O que você procura?">
                     </label>
                 </form>
-                <a href="<?php echo site_url() ?>/minha-conta" title="Entrar" class="flex-none w-[50px] hidden lg:block">
+                <a href="<?php echo site_url() ?>/minha-conta" title="Entrar" class="hover:underline flex-none w-[50px] hidden lg:block">
                     <?php echo is_user_logged_in() ? 'Perfil' : 'Entrar' ?>
                 </a>
                 <a href="<?php echo site_url() ?>/lista-de-desejos" title="lista de desejos" class="flex-none w-[50px] hidden lg:block">
-                    <img src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
+                    <img class="transition-all hover:scale-[0.8]" src="<?php echo  $layout->getFile('/assets/images/layout/heart.svg') ?>" alt="favoritos" loading="lazy">
                 </a>
                 <a href="<?php echo site_url() ?>/carrinho" title="carrinho" class="relative flex-none w-[50px] hidden lg:block">
                     <?php if (WC()->cart->get_cart_contents_count()) { ?>
-                        <div class="js-count-cart block w-[18px] h-[18px] rounded-full text-white text-[9px] leading-[22px] bg-[#C00] text-center absolute right-4 top-0">
+                        <div class="z-10 js-count-cart block w-[18px] h-[18px] rounded-full text-white text-[9px] leading-[22px] bg-[#C00] text-center absolute right-4 top-0">
                             <?php echo WC()->cart->get_cart_contents_count() ?>
                         </div>
                     <?php } ?>
-                    <img src="<?php echo  $layout->getFile('/assets/images/layout/bag.svg') ?>" alt="carrinho" loading="lazy">
+                    <img class="transition-all hover:scale-[0.8]" src="<?php echo  $layout->getFile('/assets/images/layout/bag.svg') ?>" alt="carrinho" loading="lazy">
                 </a>
             </div>
         </div>
