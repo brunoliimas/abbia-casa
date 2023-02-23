@@ -26,3 +26,29 @@ globalThis.offMenu = () => {
         $navPop.classList.remove('!left-0')
     }
 }
+
+function addPlusCardCount() {
+    let list = document.querySelectorAll('.js-count-cart')
+    list.forEach($e => {
+        $e.innerHTML = +$e.innerHTML + 1
+    });
+}
+
+function popupAddToCard() {
+    let links = document.querySelectorAll('[href*="?add-to-cart"]')
+    links.forEach($link => {
+        $link.addEventListener('click', async function (ev) {
+            ev.preventDefault()
+            if (this.getAttribute('disabled') !== null) return null
+            console.log(this.getAttribute('disabled'))
+            this.innerHTML = '<i class="animate-spin text-[#666] py-2 px-8 fa-solid fa-circle-notch"></i>'
+            await fetch(this.href)
+            this.innerHTML = "Adicionado!"
+            addPlusCardCount()
+            this.setAttribute('disabled', '')
+        })
+
+    })
+}
+
+popupAddToCard()

@@ -149,7 +149,7 @@ $layout = new Layout();
             </a>
             <a href="<?php echo site_url() ?>/carrinho" title="Carrinho" class="relative">
                 <?php if (WC()->cart->get_cart_contents_count()) { ?>
-                    <div class="block w-[18px] h-[18px] rounded-full text-white text-[9px] leading-[22px] bg-[#C00] text-center absolute right-4 top-0">
+                    <div class="js-count-cart block w-[18px] h-[18px] rounded-full text-white text-[9px] leading-[22px] bg-[#C00] text-center absolute right-4 top-0">
                         <?php echo WC()->cart->get_cart_contents_count() ?>
                     </div>
                 <?php } ?>
@@ -178,7 +178,7 @@ $layout = new Layout();
                 </a>
                 <a href="<?php echo site_url() ?>/carrinho" title="carrinho" class="relative flex-none w-[50px] hidden lg:block">
                     <?php if (WC()->cart->get_cart_contents_count()) { ?>
-                        <div class="block w-[18px] h-[18px] rounded-full text-white text-[9px] leading-[22px] bg-[#C00] text-center absolute right-4 top-0">
+                        <div class="js-count-cart block w-[18px] h-[18px] rounded-full text-white text-[9px] leading-[22px] bg-[#C00] text-center absolute right-4 top-0">
                             <?php echo WC()->cart->get_cart_contents_count() ?>
                         </div>
                     <?php } ?>
