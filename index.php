@@ -63,7 +63,7 @@ $novidade =  array_splice($novidade, 0, 4);
                 <a href="<?php echo $cat["link"] ?>" title="<?php echo $cat["title"] ?>">
                     <img class="w-full" loading="lazy" src="<?php echo $cat["img"] ?>" alt="<?php echo $cat["title"] ?>">
                 </a>
-                <a class="uppercase text-[12px] lg:text-[14px] hidden md:block md:mt-[16px] font-agrandir text-center" href="<?php echo $cat["link"] ?>" title="Descubrir">
+                <a class="hover:underline uppercase text-[12px] lg:text-[14px] hidden md:block md:mt-[16px] font-agrandir text-center" href="<?php echo $cat["link"] ?>" title="Descubrir">
                     Descubrir
                 </a>
             </div>
@@ -160,16 +160,16 @@ $novidade =  array_splice($novidade, 0, 4);
         <h3 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-face mb-4">
             Decora a sua casa
         </h3>
-        <div class="overflow-x-hidden overflow-x-scroll  w-[100vw] lg:grid lg:grid-cols-3 gap-4">
-            <div class="flex w-[200vw] gap-4">
+        <div class="overflow-x-hidden overflow-x-scroll lg:overflow-x-hidden  w-[100vw] lg:w-full gap-4">
+            <div class="flex w-[200vw] lg:w-full gap-4">
 
                 <?php foreach ($decora as $index => $prod) { ?>
-                    <div class="w-[40vw] lg:w-auto break-inside-avoid-column text-cor1 relative">
+                    <div class="w-[40vw] lg:w-[30.3vw] break-inside-avoid-column text-cor1 relative">
                         <?php if ($prod["new"]) { ?>
                             <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
                         <?php } ?>
                         <a href="<?php echo $prod["linkSingle"]; ?>" title="<?php echo $prod["title"]; ?>">
-                            <img class="w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
+                            <img class="drop-shadow-lg h-[160px] md:h-[336px] lg:h-[296px] object-cover w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                         </a>
                         <div class="flex justify-between items-center pt-4">
                             <span class="font-face text-[16px] md:text-[24px]">
@@ -183,7 +183,9 @@ $novidade =  array_splice($novidade, 0, 4);
                         <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
                             Adicionnar
                         </a>
-
+                        <p class="hidden lg:block font-face">
+                            <?php echo $prod["description"]; ?>
+                        </p>
                     </div>
                 <?php } ?>
             </div>
@@ -193,18 +195,20 @@ $novidade =  array_splice($novidade, 0, 4);
 
 <section>
     <div class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
-        <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-face mb-4">Novidades </h2>
-        <div class="overflow-x-hidden overflow-x-scroll  w-[100vw] lg:grid lg:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="flex w-[200vw] gap-4">
+        <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-face mb-4">
+            Novidades 
+        </h2>
+        <div class="overflow-x-hidden overflow-x-scroll lg:overflow-x-hidden  w-[100vw] lg:w-full  gap-4">
+            <div class="flex w-[200vw] lg:w-full gap-4">
 
                 <?php foreach ($novidade as $index => $prod) { ?>
 
-                    <div class="w-[40vw] lg:w-auto break-inside-avoid-column text-cor1 relative">
+                    <div class="w-[40vw] lg:w-[22.5vw] break-inside-avoid-column text-cor1 relative">
                         <?php if ($prod["new"]) { ?>
-                            <span class="drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
+                            <span class="hidden drop-shadow-lg translate-y-[-50%] md:text-[20px] justify-center items-center w-[40px] h-[40px] md:w-[86px] md:h-[86px] flex rounded-full bg-cor3 absolute right-[24px] top-0 font-face">Novo</span>
                         <?php } ?>
                         <a href="<?php echo $prod["linkSingle"]; ?>" title="<?php echo $prod["title"]; ?>">
-                            <img class="w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
+                            <img class="drop-shadow-lg h-[160px] md:h-[336px] lg:h-[296px] object-cover w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                         </a>
                         <div class="flex justify-between items-center pt-4">
                             <span class="font-face text-[16px]  md:text-[24px]">
@@ -218,9 +222,7 @@ $novidade =  array_splice($novidade, 0, 4);
                         <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
                             Adicionnar
                         </a>
-                        <p class="hidden lg:block font-face">
-                            <?php echo $prod["description"]; ?>
-                        </p>
+                        
                     </div>
                 <?php } ?>
             </div>
