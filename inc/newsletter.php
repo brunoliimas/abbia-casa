@@ -22,7 +22,7 @@
             <button class="<?php echo $sBtn; ?> mt-8 block lg:hidden font-face" type="submit">Enviar</button>
         </div>
         <div class="hidden lg:block" >
-            <button class="<?php echo $sBtn; ?> mt-[50px] ml-[50px] hover:bg-[#fdfdfd] transition-all" type="submit">Enviar</button>
+            <button class="<?php echo $sBtn; ?> mt-[50px] ml-[50px] hover:bg-[#EE705A] hover:text-white transition-all" type="submit">Enviar</button>
         </div>
     </form>
 </section>
