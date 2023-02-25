@@ -26,6 +26,9 @@ $prod = [
     }, $product->get_gallery_image_ids()),
     "add_cart" => "?add-to-cart=" . get_the_ID(),
     "attributes" => explode(', ', $product->get_attribute('pa_cores')),
+    "whishList" => do_shortcode("[ti_wishlists_addtowishlist product_id=\"" . get_the_ID() . "\" variation_id=\"0\"]"),
+    "add_cart" => do_shortcode("[add_to_cart_url id=\"" . get_the_ID() . "\"]"),
+
 ];
 
 apiJson($prod);
@@ -36,57 +39,46 @@ apiJson($prod);
 
 
 
-<article class="container mx-auto">
+<article class="container mx-auto px-4 font-agrandir">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
             <img class="w-full mb-4" src="<?php echo $prod['image']; ?>" alt="<?php echo $prod['name'] ?>" loading="lazy">
             <?php foreach ($prod['galeria'] as $uri_image) { ?>
-                <img class="w-full mb-4" src="<?php echo $uri_image; ?>" alt="<?php echo $prod['name'] ?>" loading="lazy">
+                <img class="hidden md:block w-full mb-4" src="<?php echo $uri_image; ?>" alt="<?php echo $prod['name'] ?>" loading="lazy">
             <?php } ?>
         </div>
         <div>
-            <h1 class="font-romie block text-cor1 text-[55px] md:text-[66px] mb-[40]"> <?php echo $prod['name']; ?> </h1>
-            <div>
+            <h1 class="font-romie block text-cor1 text-[30px] mb-[12px] md:text-[66px] ">
+                <?php echo $prod['name']; ?>
+            </h1>
+            <div class="font-face text-[14px] md:text-[18px]">
                 <?php if ($prod["price"] != $prod["regular_price"]) { ?>
-                    <span>R$ <?php echo $prod['regular_price']; ?> </span>
+                    <span class="text-[#C1C1C1] underline mr-4">R$ <?php echo $prod['regular_price']; ?> </span>
                 <?php } ?>
                 <span>R$ <?php echo $prod['price']; ?></span>
             </div>
-            <div class="py-4 flex justify-between">
+            <div class="py-4 flex justify-between items-center">
                 <div>
                     <input class="pl-[12px] text-[16px] drop-shadow-xl bg-[#FFF] rounded-[8px] w-[50px] leading-[48px]" type="number" min="1" value="1">
                 </div>
-                <div>
-                    <button class="text-[16px] drop-shadow-xl bg-[#FFF] rounded-[8px] text-center py-4 px-8">Adicionnar</button>
-                </div>
-                <div>
-                    <img src="<?php echo $l->getFile('./assets/images/layout/heart.svg') ?>" loading="lazy" alt="Adicionar aos Favoritos">
-                </div>
+                <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod['add_cart']; ?>" title="Adicionnar">
+                    Adicionnar
+                </a>
+                <?php echo $prod['whishList']; ?>
             </div>
             <span class="flex gap-2 py-4">
                 <?php foreach ($prod['attributes'] as $cor) { ?>
                     <span class=" block mr-4 rounded-full w-[20px] h-[20px] bg-[<?php echo $cor; ?>]"></span>
                 <?php } ?>
             </span>
-            <p>
-                Todo o amor e cuidado do mundo, de mim para mim!
+            <p class="border-b-2 border-[#434445] block py-4 mb-4 text-[12px] lg:text-[14px]">
+                <?php echo $prod['short']; ?>
             </p>
-            <p> Composição </p>
-            <p>
-                Alguns produtos são exclusividade ”Sac de Jour”. Os outros estão
-                disponível a venda no site. Basta clicar no link.
+            <p class="text-[#C1C1C1] text-[18px]"> Composição </p>
+            <p class="border-b-2 border-[#434445] block py-4 mb-4 text-[12px] lg:text-[14px]">
+                <?php echo $prod['description']; ?>
             </p>
-            <p>
-                - Cesto de fibras naturais <br />
-                - After Sun Be Plus Natural Care <br />
-                - Açúcar de banho Lavanda e Camomila Olea Saboaria <br />
-                - Escova de cabelo de madeira <br />
-                - Faixa de cabelo <br />
-                - Tag de coração em couro <br />
-                - Coffe Scrub Be Plus Natural Care <br />
-                - Espátulas de beleza <br />
-                - Barra Citrus Cúrcuma Olea Saboaria <br />
-            </p>
+            
             <div>
                 <span>
                     <span>Altura</span>
