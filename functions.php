@@ -21,3 +21,7 @@ add_action('init', function () {
 });
 
 add_filter( 'wc_add_to_cart_message_html', '__return_false' );
+
+function execShort($title, $content) {
+    return do_shortcode("[summary title=\"{$title}\"] {$content} [/summary]");
+}
