@@ -157,7 +157,7 @@ $novidade =  array_splice($novidade, 0, 4);
 
 <section>
     <div class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
-        <h3 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-face mb-4">
+        <h3 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-romie mb-4">
             Decora a sua casa
         </h3>
         <div class="overflow-x-hidden overflow-x-scroll lg:overflow-x-hidden  w-[100vw] lg:w-full gap-4">
