@@ -195,7 +195,7 @@ $novidade =  array_splice($novidade, 0, 4);
 
 <section>
     <div class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
-        <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-face mb-4">
+        <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-romie mb-4">
             Novidades 
         </h2>
         <div class="overflow-x-hidden overflow-x-scroll lg:overflow-x-hidden  w-[100vw] lg:w-full  gap-4">
@@ -234,7 +234,7 @@ $novidade =  array_splice($novidade, 0, 4);
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
-                <h3 class="text-[#EE705A] font-face text-[60px] mb-4 lg:leading-[50px]">
+                <h3 class="text-[#EE705A] font-romie text-[60px] mb-4 lg:leading-[50px]">
                     Art <br>
                     de vivre
                 </h3>
@@ -253,7 +253,7 @@ $novidade =  array_splice($novidade, 0, 4);
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
-                <h2 class="text-[#EE705A] font-face text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Harmonia e fluidez
                 </h2>
                 <p class="text-cor1 font-face">
@@ -270,7 +270,7 @@ $novidade =  array_splice($novidade, 0, 4);
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-2.png'); ?>" alt="img">
             <div>
-                <h2 class="text-[#EE705A] font-face text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Mélange
                 </h2>
                 <p class="text-cor1 font-face">
@@ -284,7 +284,7 @@ $novidade =  array_splice($novidade, 0, 4);
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-4.png'); ?>" alt="img">
             <div class="relative">
-                <h2 class="text-[#EE705A] font-face text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
                     Memória afetivas
                 </h2>
                 <p class="text-cor1 font-face">
