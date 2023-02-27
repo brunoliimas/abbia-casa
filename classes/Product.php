@@ -7,6 +7,14 @@ class Product
     {
     }
 
+    function get_all() {
+        $all_prod = wc_get_products(array(
+            'status' => 'publish', 
+            'limit' => -1 
+        ));
+        return $this->porterProduct($all_prod); 
+    }
+
     function productsByCategorySlug($slug)
     {
         $allProducts = $this->getAllProductBySlugCategory($slug);
