@@ -1,6 +1,6 @@
 <?php
 
-die('!');
+
 
 $l = new Layout();
 
@@ -34,7 +34,8 @@ $prod = [
     }, $product->get_gallery_image_ids()),
     "add_cart" => "?add-to-cart=" . get_the_ID(),
     "attributes" => explode(', ', $product->get_attribute('pa_cores')),
-    "whishList" => do_shortcode("[ti_wishlists_addtowishlist product_id=\"" . get_the_ID() . "\" variation_id=\"0\"]"),
+    // "whishList" => do_shortcode("[ti_wishlists_addtowishlist product_id=\"" . get_the_ID() . "\" variation_id=\"0\"]"),
+    "whishList" => '',
     "add_cart" => do_shortcode("[add_to_cart_url id=\"" . get_the_ID() . "\"]"),
 
 ];
