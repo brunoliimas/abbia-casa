@@ -1,5 +1,6 @@
 <?php
 
+die('!');
 
 $l = new Layout();
 
