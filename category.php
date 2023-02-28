@@ -23,8 +23,8 @@ function getWidthByIndex(&$stateIndex)
 {
     $stateIndex++;
     $loopClass = [
-        "w-[50%] md:w-[10%]",
-        "w-[50%] md:w-[60%]",
+        "w-[50%] md:w-[20%]",
+        "w-[50%] md:w-[40%]",
         "w-[50%] md:w-[30%]",
         "w-[50%] md:w-[70%]",
         "w-[50%] md:w-[30%]",
@@ -63,7 +63,7 @@ function getWidthByIndex(&$stateIndex)
 
         <div class="container mx-auto px-4 lg:border-t-2 border-cor6 pt-[40px] mt-[40px]">
             <div class="flex flex-wrap items-center">
-                <div class="w-[50%] md:w-[10%]">
+                <div class="w-[50%] md:w-[20%]">
                     <img class="w-[50%] " src="<?php echo $l->getFile('/assets/logo/AbbiaCasa-01.svg'); ?>" loading="lazy" alt="Abbia Casa">
                 </div>
 
@@ -76,7 +76,7 @@ function getWidthByIndex(&$stateIndex)
                             </span>
                         <?php } ?>
                         <a href="<?php echo $p['linkSingle'] ?>" title="prod">
-                            <img class="drop-shadow-lg h-[160px] md:h-[336px] lg:h-[296px] object-cover w-full" loading="lazy" src="<?php echo $p['image'] ?>" alt="<?php echo $p['title'] ?>">
+                            <img class="drop-shadow-lg mb-2 h-[160px] md:h-[336px] lg:h-[296px] object-cover w-full" loading="lazy" src="<?php echo $p['image'] ?>" alt="<?php echo $p['title'] ?>">
                         </a>
                         <span class="font-face text-[16px]  md:text-[24px]">
                             <?php echo $p['title'] ?>
