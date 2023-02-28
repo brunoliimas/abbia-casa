@@ -76,7 +76,7 @@ function getWidthByIndex(&$stateIndex)
                             </span>
                         <?php } ?>
                         <a href="<?php echo $p['linkSingle'] ?>" title="prod">
-                            <img class="drop-shadow-lg md-2 h-[160px] md:h-[336px] lg:h-[296px] object-cover w-full" loading="lazy" src="<?php echo $p['image'] ?>" alt="<?php echo $p['title'] ?>">
+                            <img class="drop-shadow-lg md-2 h-[160px] md:h-[336px] lg:h-[360px] object-cover w-full" loading="lazy" src="<?php echo $p['image'] ?>" alt="<?php echo $p['title'] ?>">
                         </a>
                         <span class="font-face text-[16px]  md:text-[24px]">
                             <?php echo $p['title'] ?>
