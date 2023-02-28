@@ -85,7 +85,7 @@ $novidade =  array_splice($novidade, 0, 4);
             Sac du jour
         </h2>
         <p class="text-[14px] lg:leading-[18px] font-agrandir md:text-[18px] lg:text-[14px] text-cor1 py-[40px]">
-            Um conjunto de produtos edxclusivo que
+            Um conjunto de produtos exclusivos que
             atende aos ambientes da casa, do trabalho,
             da beleza e do lifestyle. <br>
             Mas com alguns elementos surpresa!

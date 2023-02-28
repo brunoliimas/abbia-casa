@@ -19,7 +19,7 @@ $novidade = $prod->productsByCategorySlug('novidade');
 $novidade =  array_splice($novidade, 0, 4);
 
 $stateIndex = 0;
-function getWidthByIndex(&$stateIndex)
+function getWidthByIndex(&$stateIndex) 
 {
     $stateIndex++;
     $loopClass = [
