@@ -102,7 +102,7 @@ function getWidthByIndex(&$stateIndex)
 
 
         <section class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
-            <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-face mb-4">
+            <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-romie mb-4">
                 Você pode também gostar
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
