@@ -10,8 +10,9 @@ $product = wc_get_product(get_the_ID());
 
 $cat = new Product();
 
-$novidade = $cat->productsByCategorySlug('novidade');
-$novidade =  array_splice($novidade, 0, 6);
+// $novidade = $cat->productsByCategorySlug('novidade');
+// $novidade =  array_splice($novidade, 0, 6);
+$novidade =  [];
 
 $prod = [
     "id" => get_the_ID(),
@@ -39,7 +40,7 @@ $prod = [
 
 ];
 
-// apiJson($prod);
+apiJson($prod);
 
 ?>
 
