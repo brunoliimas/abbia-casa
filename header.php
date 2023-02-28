@@ -69,16 +69,16 @@ $layout = new Layout();
         </a>
         <ul>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/casa" title="Casa">Casa</a>
+                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/casa" title="Casa">Casa</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/acessorios" title="Acessórios">Acessórios</a>
+                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/acessorios" title="Acessórios">Acessórios</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/sac-du-jour" title="Sac du jour">Sac du jour</a>
+                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/sac-du-jour" title="Sac du jour">Sac du jour</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/beaute" title="Beauté">Beauté</a>
+                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/beaute" title="Beauté">Beauté</a>
                 <ul class="hidden">
                     <li>
                         <a href="" title="">Rosto</a>
@@ -107,34 +107,34 @@ $layout = new Layout();
                 </ul>
             </li>
             <li>
-                <a class="font-romie font-face text-[33px]" href="<?php echo site_url() ?>/product-category/colabs" title="Colabs">Colabs</a>
+                <a class="hover:opacity-75 font-romie font-face text-[33px]" href="<?php echo site_url() ?>/product-category/colabs" title="Colabs">Colabs</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/novidades" title="Novidades">Novidades</a>
+                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/novidades" title="Novidades">Novidades</a>
             </li>
             <li>
-                <a class="font-romie text-[33px]" href="<?php echo site_url() ?>/art-de-vivre-abbia-casa" title="A curadoria">A curadoria</a>
+                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/art-de-vivre-abbia-casa" title="A curadoria">A curadoria</a>
             </li>
             <li>
-                <a class=" text-[18px] font-face" href="#" title="+ Infos">+ Infos </a>
-                <ul class="hidden">
+                <a class=" text-[18px] font-agrandir pl-4 hover:opacity-75" href="#" title="+ Infos" onclick="toggleInfo()">+ Infos </a>
+                <ul class="js-info hidden pl-4">
                     <li>
-                        <a href="<?php echo site_url() ?>/contato#newsletter" title="Newsletter">Newsletter</a>
+                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/contato#newsletter" title="Newsletter">Newsletter</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url() ?>/contato" title="Contato">Contato</a>
+                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/contato" title="Contato">Contato</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url() ?>/quem-somos" title="Quem somos">Quem somos</a>
+                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/quem-somos" title="Quem somos">Quem somos</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url() ?>/lgpd" title="Politica de privacidade">Politica de privacidade</a>
+                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/lgpd" title="Politica de privacidade">Politica de privacidade</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url() ?>/politica-de-venda" title="Politica de venda">Politica de venda</a>
+                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/politica-de-venda" title="Politica de venda">Politica de venda</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url() ?>/faq" title="FAQ">FAQ</a>
+                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/faq" title="FAQ">FAQ</a>
                     </li>
                 </ul>
             </li>

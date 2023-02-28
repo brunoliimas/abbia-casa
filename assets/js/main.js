@@ -52,3 +52,8 @@ function popupAddToCard() {
 }
 
 popupAddToCard()
+
+function toggleInfo() {
+    $menu = document.querySelector('.js-info')
+    $menu.classList.toggle('hidden')
+}
