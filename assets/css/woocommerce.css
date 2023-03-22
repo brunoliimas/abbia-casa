@@ -19,6 +19,13 @@
     /* text-align: center; */
 }
 
+.custom-carrinho .size-woocommerce_thumbnail {
+    width: 100px;
+}
+.custom-carrinho .checkout-button {
+    background-color: #EE705A !important;
+}
+
 @media (min-width: 768px) {
     .custom-edit-account .woocommerce,
     .custom-edit-address .woocommerce,

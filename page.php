@@ -16,8 +16,5 @@ $page = new Page();
     </article>
 </section>
 
-<?php include __DIR__ . "/inc/newsletter.php"; ?>
-
-<?php include __DIR__ . "/inc/shop.php"; ?>
 
 <?php get_footer(); ?>
