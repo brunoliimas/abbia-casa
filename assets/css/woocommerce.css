@@ -1,6 +1,12 @@
 
-.woocommerce form input {
+.woocommerce form input:not([type="checkbox"]) {
     border-bottom: 1px solid var(--cor1);
+    line-height: 38px;
+    height: 38px;
+}
+.woocommerce {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .custom-edit-account .woocommerce,
@@ -24,6 +30,8 @@
 }
 .custom-carrinho .checkout-button {
     background-color: #EE705A !important;
+    font-weight: normal;
+    font-family: 'Agrandir';
 }
 
 @media (min-width: 768px) {
@@ -35,4 +43,80 @@
         display: grid;
         grid-template-columns: 30% 1fr;
     }
+}
+
+.custom-minha-conta .woocommerce {
+    grid-template-columns: 1fr !important;
+}
+
+#place_order,
+.woocommerce button.button {
+    background-color: #EE705A;
+    color: #FFF;
+    font-weight: normal;
+    font-family: 'Agrandir';
+}
+#place_order:hover,
+.woocommerce button.button:hover {
+    background-color: #fa826d;
+    color: #FFF;
+    font-weight: normal;
+    font-family: 'Agrandir';
+}
+
+.col2-set {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+#order_review_heading {
+    display: none !important;
+}
+
+.woocommerce .col2-set .col-1,
+.woocommerce .col2-set .col-2 {
+    width: 100%;
+    max-width: 100vw;
+}
+
+@media (min-width:760px) {
+    
+    .woocommerce-checkout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+.woocommerce-checkout #payment {
+    background-color: #FEF5ED;
+}
+.woocommerce-checkout #payment div.payment_box {
+    background-color: #faebde;
+    
+}
+
+.woocommerce-checkout #payment div.payment_box::before {
+
+    border: 1em solid #faebde;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+   
+}
+
+.select2-container--default .select2-selection--single {
+    border: none !important;
+    border-bottom: 1px solid var(--cor1) !important;
+    line-height: 38px;
+    height: 38px;
+    background-color: transparent;    
+}
+
+.woocommerce-MyAccount-navigation {
+    font-weight: normal;
+    font-family: 'Agrandir';
+    line-height: 35px;
+    font-size: 22px;
+    color: #EE705A;
 }
