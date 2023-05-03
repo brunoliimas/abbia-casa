@@ -14,9 +14,9 @@
 .custom-downloads .woocommerce,
 .custom-orders .woocommerce,
 .custom-minha-conta .woocommerce {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr; */
+    /* gap: 20px; */
 }
 
 .custom-minha-conta h2 {
@@ -45,7 +45,7 @@
     }
 }
 
-.custom-minha-conta .woocommerce {
+.custom-minha-conta:not(.is_logged) .woocommerce {
     grid-template-columns: 1fr !important;
 }
 
@@ -119,4 +119,13 @@
     line-height: 35px;
     font-size: 22px;
     color: #EE705A;
+}
+
+#customer_login {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
+.woocommerce .col2-set::before {
+    display: none !important;
 }

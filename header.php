@@ -56,7 +56,7 @@ $layout = new Layout();
     <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>">
 </head>
 
-<body class="font-agrandir <?php echo getSlug(); ?> bg-[#fefdfb] !overflow-x-hidden" style="overflow-x: hidden !important;">
+<body class="font-agrandir <?php echo getSlug(); ?> <?php echo is_user_logged_in() ? 'is_logged' : 'not_logged' ?> bg-[#fefdfb] !overflow-x-hidden" style="overflow-x: hidden !important;">
 
     <?php wp_body_open(); ?>
 
