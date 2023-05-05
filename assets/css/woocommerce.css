@@ -1,9 +1,9 @@
-
 .woocommerce form input:not([type="checkbox"]) {
     border-bottom: 1px solid var(--cor1);
     line-height: 38px;
     height: 38px;
 }
+
 .woocommerce {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -28,6 +28,7 @@
 .custom-carrinho .size-woocommerce_thumbnail {
     width: 100px;
 }
+
 .custom-carrinho .checkout-button {
     background-color: #EE705A !important;
     font-weight: normal;
@@ -35,6 +36,7 @@
 }
 
 @media (min-width: 768px) {
+
     .custom-edit-account .woocommerce,
     .custom-edit-address .woocommerce,
     .custom-downloads .woocommerce,
@@ -56,6 +58,7 @@
     font-weight: normal;
     font-family: 'Agrandir';
 }
+
 #place_order:hover,
 .woocommerce button.button:hover {
     background-color: #fa826d;
@@ -69,6 +72,7 @@
     grid-template-columns: 1fr;
     width: 100%;
 }
+
 #order_review_heading {
     display: none !important;
 }
@@ -80,7 +84,7 @@
 }
 
 @media (min-width:760px) {
-    
+
     .woocommerce-checkout {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -91,9 +95,10 @@
 .woocommerce-checkout #payment {
     background-color: #FEF5ED;
 }
+
 .woocommerce-checkout #payment div.payment_box {
     background-color: #faebde;
-    
+
 }
 
 .woocommerce-checkout #payment div.payment_box::before {
@@ -102,7 +107,7 @@
     border-right-color: transparent;
     border-left-color: transparent;
     border-top-color: transparent;
-   
+
 }
 
 .select2-container--default .select2-selection--single {
@@ -110,7 +115,7 @@
     border-bottom: 1px solid var(--cor1) !important;
     line-height: 38px;
     height: 38px;
-    background-color: transparent;    
+    background-color: transparent;
 }
 
 .woocommerce-MyAccount-navigation {
@@ -121,11 +126,14 @@
     color: #EE705A;
 }
 
-#customer_login {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: 1fr 1fr;
-}
 .woocommerce .col2-set::before {
     display: none !important;
+}
+
+@media (min-width:768px) {
+    #customer_login {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 1fr 1fr;
+    }
 }
