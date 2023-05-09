@@ -97,6 +97,13 @@
     </footer>
 
     <?php wp_footer(); ?>
+
+    <div class="animate-ping flex justify-center items-center fixed bottom-0 left-0 bg-[#111] text-[#FFF] z-50 w-full min-h-[25px]">
+
+    </div>
+    <div class="flex justify-center items-center fixed bottom-0 left-0 bg-[#111] text-[#0f5] z-50 w-full min-h-[25px] text-[11px]">
+        Loja em desenvolvimento as vendas estão disponíveis no momento!
+    </div>
     
 </body>
 
