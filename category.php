@@ -25,7 +25,7 @@ function getWidthByIndex(&$stateIndex)
     $loopClass = [
         "w-[50%] md:w-[20%]",
         "w-[50%] md:w-[40%]",
-        "w-[50%] md:w-[30%]",
+        "w-[50%] md:w-[40%]",
         "w-[50%] md:w-[70%]",
         "w-[50%] md:w-[30%]",
         "w-[50%] md:w-[50%]",
@@ -75,16 +75,17 @@ function getWidthByIndex(&$stateIndex)
                                 <?php echo $p['sale'] ?>%
                             </span>
                         <?php } ?>
+                        <!-- verificar se esta na categoria novo ou tem descounto -->
                         <a href="<?php echo $p['linkSingle'] ?>" title="prod">
                             <img class="drop-shadow-lg mb-2 h-[160px] md:h-[336px] lg:h-[360px] object-cover w-full" loading="lazy" src="<?php echo $p['image'] ?>" alt="<?php echo $p['title'] ?>">
                         </a>
-                        <span class="font-face text-[16px]  md:text-[24px]">
-                            <?php echo $p['title'] ?>
+                        <span class="font-romie text-[16px]  md:text-[24px] tracking-[2px] text-[#434445]">
+                            <?php echo $p['title'] ?> 
                         </span>
-                        <span class="block text-[18px]">
+                        <span class="block text-[18px] text-[#434445]">
                             R$ <?php echo $p['price'] ?>
                         </span>
-                        <div class="flex justify-between items-center pt-4">
+                        <div class="flex justify-between items-center pt-4 text-[#434445]">
                             <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $p['addToCart'] ?>" title="Adicionnar">
                                 Adicionnar
                             </a>
@@ -99,7 +100,7 @@ function getWidthByIndex(&$stateIndex)
 
 
         <section class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
-            <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-romie mb-4">
+            <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#434445]  font-romie mb-4">
                 Você pode também gostar
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">

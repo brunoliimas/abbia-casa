@@ -45,7 +45,7 @@ $novidade =  array_splice($novidade, 0, 4);
 <?php get_header(); ?>
 
 <section>
-    <h1 class="text-center lg:leading-[80px] font-romie text-[26px] md:text-[50px] lg:text-[66px]">
+    <h1 class="text-center lg:leading-[80px] font-romie text-[26px] md:text-[50px] lg:text-[66px]  tracking-[3px]">
         Cuidados diáros, <br>
         interior e curiosidades
     </h1>
@@ -56,14 +56,14 @@ $novidade =  array_splice($novidade, 0, 4);
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
         <?php foreach ($cats as $cat) { ?>
             <div>
-                <a class="text-[18px] lg:text-[24px] text-center block font-face" href="<?php echo $cat["link"] ?>" title="<?php echo $cat["title"] ?>">
+                <a class="text-[18px] lg:text-[24px] text-center block font-romie tracking-[3px]" href="<?php echo $cat["link"] ?>" title="<?php echo $cat["title"] ?>">
                     <?php echo $cat["title"] ?>
                 </a>
                 <span class="mt-[4px] mb-[16px] block w-[1px] mx-auto bg-cor1 h-[23px] "></span>
                 <a href="<?php echo $cat["link"] ?>" title="<?php echo $cat["title"] ?>">
                     <img class="w-full" loading="lazy" src="<?php echo $cat["img"] ?>" alt="<?php echo $cat["title"] ?>">
                 </a>
-                <a class="hover:underline uppercase text-[12px] lg:text-[14px] hidden md:block md:mt-[16px] font-agrandir text-center" href="<?php echo $cat["link"] ?>" title="Descubrir">
+                <a class="hover:underline uppercase text-[12px] lg:text-[14px] hidden md:block md:mt-[16px] font-agrandir text-center tracking-[2px]" href="<?php echo $cat["link"] ?>" title="Descubrir">
                     Descubrir
                 </a>
             </div>
@@ -73,7 +73,7 @@ $novidade =  array_splice($novidade, 0, 4);
 
 <section class="container mx-auto relative my-[60px] ">
     <img class="w-full" loading="lazy" src="<?php echo $l->getFile('/assets/images/hero-section/novidade.png'); ?>" alt="Novidades">
-    <a class="rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[285px] py-[15px] text-cor1 font-face text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $l->site ?>/product-category/novidade/" title="Novidades">
+    <a class="tracking-[3px] rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[114px] py-[7px] lg:w-[285px] lg:py-[15px] text-cor1 font-romie text-[12px] lg:text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $l->site ?>/product-category/novidade/" title="Novidades">
         Novidades
     </a>
 </section>
@@ -105,11 +105,11 @@ $novidade =  array_splice($novidade, 0, 4);
             <h2 class="font-romie lg:leading-[66px] text-[25px] md:text-[45px] lg:text-[60px] text-[#EE705A]">
                 Sac du jour
             </h2>
-            <p class="text-[14px] lg:leading-[18px] font-agrandir md:text-[18px] lg:text-[14px] text-cor1 py-[40px]">
+            <p class="text-[14px]  font-agrandir md:text-[18px] lg:text-[24px] text-cor1 py-[40px]">
                 Um conjunto de produtos edxclusivo que
                 atende aos ambientes da casa, do trabalho,
                 da beleza e do lifestyle. <br>
-                Mas com alguns elementos surpresa!
+                Mas com alguns elementos surpresa! 
             </p>
             <p class="md:hidden border-t-2 border-cor6 text-[14px] md:text-[18px] lg:text-[24px] text-cor1 py-[40px]">
                 Sac du jour é um artigo com o DNA absoluto da Abbia
@@ -130,8 +130,8 @@ $novidade =  array_splice($novidade, 0, 4);
                     <img class="w-full h-[180px] md:h-[380px] lg:h-[464px] object-cover drop-shadow-lg" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                 </a>
                 <div class="flex justify-between items-center pt-4">
-                    <span class="font-face text-[16px] md:text-[24px]">
-                        <?php echo $prod["title"]  ?>
+                    <span class="font-romie text-[16px] md:text-[24px]">
+                        <?php echo $prod["title"]  ?> 
                     </span>
                     <?php echo $prod["whishList"]; ?>
                 </div>
@@ -172,7 +172,7 @@ $novidade =  array_splice($novidade, 0, 4);
                             <img class="drop-shadow-lg h-[160px] md:h-[336px] lg:h-[296px] object-cover w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                         </a>
                         <div class="flex justify-between items-center pt-4">
-                            <span class="font-face text-[16px] md:text-[24px]">
+                            <span class="font-romie text-[16px] md:text-[24px]">
                                 <?php echo $prod["title"]; ?>
                             </span>
                             <?php echo $prod["whishList"]; ?>
@@ -180,7 +180,7 @@ $novidade =  array_splice($novidade, 0, 4);
                         <span class="block text-[12px] md:text-[18px]">
                             R$ <?php echo $prod["price"]; ?>
                         </span>
-                        <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
+                        <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-8 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
                             Adicionnar
                         </a>
                         <p class="hidden lg:block font-face">
@@ -211,7 +211,7 @@ $novidade =  array_splice($novidade, 0, 4);
                             <img class="drop-shadow-lg h-[160px] md:h-[336px] lg:h-[296px] object-cover w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                         </a>
                         <div class="flex justify-between items-center pt-4">
-                            <span class="font-face text-[16px]  md:text-[24px]">
+                            <span class="font-romie text-[16px]  md:text-[24px]">
                                 <?php echo $prod["title"]; ?>
                             </span>
                             <?php echo $prod["whishList"]; ?>
@@ -234,11 +234,11 @@ $novidade =  array_splice($novidade, 0, 4);
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
-                <h3 class="text-[#EE705A] font-romie text-[60px] mb-4 lg:leading-[50px]">
+                <h3 class="text-[#EE705A] font-romie text-[60px] mb-4 lg:leading-[60px] tracking-[3px]">
                     Art <br>
                     de vivre
                 </h3>
-                <h2 class="text-[#EE705A] lg:leading-[29px] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] lg:leading-[29px] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4 tracking-[2px]">
                     Abbia Casa e você
                 </h2>
                 <p class="text-cor1 font-face">
@@ -253,7 +253,7 @@ $novidade =  array_splice($novidade, 0, 4);
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
-                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4 tracking-[2px]">
                     Harmonia e fluidez
                 </h2>
                 <p class="text-cor1 font-face">
@@ -270,7 +270,7 @@ $novidade =  array_splice($novidade, 0, 4);
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-2.png'); ?>" alt="img">
             <div>
-                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4 tracking-[2px]">
                     Mélange
                 </h2>
                 <p class="text-cor1 font-face">
@@ -284,7 +284,7 @@ $novidade =  array_splice($novidade, 0, 4);
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-4.png'); ?>" alt="img">
             <div class="relative">
-                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4">
+                <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4 tracking-[2px]">
                     Memória afetivas
                 </h2>
                 <p class="text-cor1 font-face">
