@@ -109,7 +109,7 @@ $novidade =  array_splice($novidade, 0, 4);
                 Um conjunto de produtos edxclusivo que
                 atende aos ambientes da casa, do trabalho,
                 da beleza e do lifestyle. <br>
-                Mas com alguns elementos surpresa! 
+                Mas com alguns elementos surpresa!
             </p>
             <p class="md:hidden border-t-2 border-cor6 text-[14px] md:text-[18px] lg:text-[24px] text-cor1 py-[40px]">
                 Sac du jour é um artigo com o DNA absoluto da Abbia
@@ -131,16 +131,21 @@ $novidade =  array_splice($novidade, 0, 4);
                 </a>
                 <div class="flex justify-between items-center pt-4">
                     <span class="font-romie text-[16px] md:text-[24px]">
-                        <?php echo $prod["title"]  ?> 
+                        <?php echo $prod["title"]  ?>
                     </span>
-                    <?php echo $prod["whishList"]; ?>
+
                 </div>
                 <span class="block text-[12px] md:text-[18px]">
                     R$ <?php echo $prod["price"]; ?>
                 </span>
-                <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
-                    Adicionnar
-                </a>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
+                            Adicionnar
+                        </a>
+                    </div>
+                    <?php echo $prod["whishList"]; ?>
+                </div>
             </div>
             <?php if ($index == 0) { ?>
                 <div class="hidden md:block">
@@ -175,14 +180,19 @@ $novidade =  array_splice($novidade, 0, 4);
                             <span class="font-romie text-[16px] md:text-[24px]">
                                 <?php echo $prod["title"]; ?>
                             </span>
-                            <?php echo $prod["whishList"]; ?>
                         </div>
                         <span class="block text-[12px] md:text-[18px]">
                             R$ <?php echo $prod["price"]; ?>
                         </span>
-                        <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-8 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
-                            Adicionnar
-                        </a>
+                        <div class="flex justify-between items-center ">
+                            <span>
+                                <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-8 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
+                                    Adicionnar
+                                </a>
+                            </span>
+                            <?php echo $prod["whishList"]; ?>
+                        </div>
+
                         <p class="hidden lg:block font-face">
                             <?php echo $prod["description"]; ?>
                         </p>
@@ -196,7 +206,7 @@ $novidade =  array_splice($novidade, 0, 4);
 <section>
     <div class="container mx-auto px-4 border-t-2 border-cor6 pt-[40px] mt-[40px]">
         <h2 class="text-[25px] md:text-[45px] lg:text-[40px] text-[#EE705A] font-romie mb-4">
-            Novidades 
+            Novidades
         </h2>
         <div class="overflow-x-hidden overflow-x-scroll lg:overflow-x-hidden  w-[100vw] lg:w-full  gap-4">
             <div class="flex w-[200vw] lg:w-full gap-4">
@@ -214,15 +224,18 @@ $novidade =  array_splice($novidade, 0, 4);
                             <span class="font-romie text-[16px]  md:text-[24px]">
                                 <?php echo $prod["title"]; ?>
                             </span>
-                            <?php echo $prod["whishList"]; ?>
                         </div>
                         <span class="block text-[18px]">
                             R$ <?php echo $prod["price"]; ?>
                         </span>
-                        <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
-                            Adicionnar
-                        </a>
-                        
+                        <div class="flex justify-between items-center">
+                            <span>
+                                <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
+                                    Adicionnar
+                                </a>
+                            </span>
+                            <?php echo $prod["whishList"]; ?>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
