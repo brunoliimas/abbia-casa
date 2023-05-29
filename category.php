@@ -119,7 +119,7 @@ function getWidthByIndex(&$stateIndex)
                             <?php echo $prod["whishList"]; ?>
                         </div>
                         <span class="block text-[18px]">
-                            <?php echo $prod["price"]; ?>
+                            R$ <?php echo $prod["price"]; ?>
                         </span>
                         <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
                             Adicionnar

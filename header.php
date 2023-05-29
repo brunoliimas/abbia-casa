@@ -64,7 +64,7 @@ $layout = new Layout();
 
     <nav id="js-nav-pop" class="fixed top-0 left-[-80vw] w-[75vw] lg:left-[-40vw] lg:w-[35vw] h-[100vh] lg:h-full bg-cor3 p-4  z-10 transition-all duration-300 ease-in-out">
         <span>
-            <img onclick="offMenu()" class="w-[40px] md:hidden" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
+            <img onclick="offMenu()" class="w-[40px] cursor-pointer" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
         </span>
         <a href="<?php echo site_url() ?>" title="Abbia Casa">
             <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">

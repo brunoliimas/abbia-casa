@@ -1,18 +1,13 @@
 <?php
 
-
-
 $l = new Layout();
-
 $product = wc_get_product(get_the_ID());
-
-
 
 $cat = new Product();
 
-// $novidade = $cat->productsByCategorySlug('novidade');
-// $novidade =  array_splice($novidade, 0, 6);
-$novidade =  [];
+$like = $cat->get_all_prod_bay_id_cats($product->get_category_ids());
+
+$novidade =  $like;
 
 $prod = [
     "id" => get_the_ID(),
@@ -37,7 +32,7 @@ $prod = [
     "attributes" => explode(', ', $product->get_attribute('pa_cores')),
     "whishList" => do_shortcode("[ti_wishlists_addtowishlist product_id=\"" . get_the_ID() . "\" variation_id=\"0\"]"),
     "add_cart" => do_shortcode("[add_to_cart_url id=\"" . get_the_ID() . "\"]"),
-
+    "cats" => $product->get_category_ids(),
 ];
 
 apiJson($prod);
@@ -133,12 +128,12 @@ apiJson($prod);
                         <div class="w-[40vw] lg:w-[15vw] break-inside-avoid-column text-cor1 relative">
                             <a href="<?php echo $prod["linkSingle"]; ?>" title="<?php echo $prod["title"]; ?>">
                                 <img class="drop-shadow-lg h-[40vw] lg:h-[15vw] object-cover w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
-                            </a>                        
+                            </a>
                         </div>
                     <?php } ?>
                 </div>
-            </div>            
-        </div>            
+            </div>
+        </div>
     </div>
 </article>
 

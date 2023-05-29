@@ -3,16 +3,16 @@ let $navIco = document.querySelector("#js-nav-ico")
 let closeMenu = null
 
 if ($navPop && $navIco) {
-    $navPop.addEventListener('mouseover', function () {
+    $navPop.addEventListener('click', function () {
         $navPop.classList.add('!left-0')
         clearTimeout(closeMenu)
     })
-    $navIco.addEventListener('mouseover', function () {
+    $navIco.addEventListener('click', function () {
 
         $navPop.classList.add('!left-0')
         clearTimeout(closeMenu)
     })
-    $navPop.addEventListener('mouseout', function () {
+    $navPop.addEventListener('click', function () {
         closeMenu = setTimeout(() => {
             $navPop.classList.remove('!left-0')
         }, 100)
