@@ -31,6 +31,7 @@ class Product
     {
         return wc_get_products(array(
             'category' => array($slug),
+            'limit' => -1
         ));
     }
 
