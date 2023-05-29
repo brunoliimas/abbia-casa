@@ -98,7 +98,7 @@ class Product
                 "title" => $p->get_name(),
                 "slug" => $p->get_slug(),
                 "new" => in_array($categoryId, $p->get_category_ids()),
-                "price" => $p->get_price(),
+                "price" => number_format( $p->get_price(), 2, ',','.' ),
                 "image" => get_the_post_thumbnail_url($p->get_id()),
                 "description" => $p->get_short_description(),
                 "linkSingle" => get_permalink($p->get_id()),

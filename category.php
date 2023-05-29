@@ -82,7 +82,7 @@ function getWidthByIndex(&$stateIndex)
                         <span class="font-romie text-[16px]  md:text-[24px] tracking-[2px] text-[#434445]">
                             <?php echo $p['title'] ?> 
                         </span>
-                        <span class="block text-[18px] text-[#434445]">
+                        <span class="block text-[18px] text-[#434445] font-light">
                             R$ <?php echo $p['price'] ?>
                         </span>
                         <div class="flex justify-between items-center pt-4 text-[#434445]">

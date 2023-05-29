@@ -57,7 +57,7 @@ apiJson($prod);
                 <?php if ($prod["price"] != $prod["regular_price"]) { ?>
                     <span class="text-[#C1C1C1] underline mr-4">R$ <?php echo $prod['regular_price']; ?> </span>
                 <?php } ?>
-                <span>R$ <?php echo $prod['price']; ?></span>
+                <span class="font-light">R$ <?php echo $prod['price']; ?></span>
             </div>
             <div class="py-4 flex justify-between items-center">
                 <div>

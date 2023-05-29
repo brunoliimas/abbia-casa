@@ -135,7 +135,7 @@ $novidade =  array_splice($novidade, 0, 4);
                     </span>
 
                 </div>
-                <span class="block text-[12px] md:text-[18px]">
+                <span class="block text-[12px] md:text-[18px] font-light">
                     R$ <?php echo $prod["price"]; ?>
                 </span>
                 <div class="flex justify-between items-center">
@@ -181,7 +181,7 @@ $novidade =  array_splice($novidade, 0, 4);
                                 <?php echo $prod["title"]; ?>
                             </span>
                         </div>
-                        <span class="block text-[12px] md:text-[18px]">
+                        <span class="block text-[12px] md:text-[18px] font-light">
                             R$ <?php echo $prod["price"]; ?>
                         </span>
                         <div class="flex justify-between items-center ">
@@ -225,7 +225,7 @@ $novidade =  array_splice($novidade, 0, 4);
                                 <?php echo $prod["title"]; ?>
                             </span>
                         </div>
-                        <span class="block text-[18px]">
+                        <span class="block text-[18px] font-light">
                             R$ <?php echo $prod["price"]; ?>
                         </span>
                         <div class="flex justify-between items-center">
