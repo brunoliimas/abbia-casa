@@ -2,6 +2,8 @@
 
 $layout = new Layout();
 
+$menu = get_menus_array('header');
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -14,7 +16,7 @@ $layout = new Layout();
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/fonts.css">
-    <?php if( file_exists(__DIR__. "/.dev") ) { ?>
+    <?php if (file_exists(__DIR__ . "/.dev")) { ?>
         <meta http-equiv="refresh" content="10">
     <?php } ?>
     <script>
@@ -70,53 +72,32 @@ $layout = new Layout();
             <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
         </a>
         <ul>
-            <li>
-                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/casa" title="Casa">Casa</a>
-            </li>
-            <li>
-                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/acessorios" title="Acessórios">Acessórios</a>
-            </li>
-            <li>
-                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/sac-du-jour" title="Sac du jour">Sac du jour</a>
-            </li>
-            <li>
-                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/beaute" title="Beauté">Beauté</a>
-                <ul class="hidden">
-                    <li>
-                        <a href="" title="">Rosto</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Cabelo</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Corpo</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Creme</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Sabonete</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Perfume</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Banho</a>
-                    </li>
-                    <li>
-                        <a href="" title="">Todos</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="hover:opacity-75 font-romie font-face text-[33px]" href="<?php echo site_url() ?>/product-category/colabs" title="Colabs">Colabs</a>
-            </li>
-            <li>
-                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/product-category/novidades" title="Novidades">Novidades</a>
-            </li>
-            <li>
-                <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo site_url() ?>/art-de-vivre-abbia-casa" title="A curadoria">A curadoria</a>
-            </li>
+
+            <?php foreach ($menu as $index => $a) { ?>
+                <li>
+                    <div class="flex justify-between items-center w-full">
+                        <div>
+                            <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo $a['url'] ?>" title="<?php echo $a['title'] ?>">
+                                <?php echo $a['title'] ?>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="<?php echo  $layout->getFile('/assets/images/icons/down-arrow.png') ?>" class="-rotate-90 cursor-pointer transition-all" width="32" data-link="<?php echo $index ?>">
+                        </div>
+                    </div>
+                    <ul class="hidden pl-4" data-linkActive="<?php echo $index ?>">
+                        <?php foreach ($a['sub'] as $l) { ?>
+                            <li>
+                                <a class="hover:opacity-75" href="<?php echo $l['url'] ?>" title="<?php echo $l['title'] ?>">
+                                    <?php echo $l['title'] ?>
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+
+                </li>
+            <?php } ?>
+
             <li>
                 <a class=" text-[18px] font-agrandir pl-4 hover:opacity-75" href="#" title="+ Infos" onclick="toggleInfo()">+ Infos </a>
                 <ul class="js-info hidden pl-4">

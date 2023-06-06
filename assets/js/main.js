@@ -3,20 +3,19 @@ let $navIco = document.querySelector("#js-nav-ico")
 let closeMenu = null
 
 if ($navPop && $navIco) {
-    $navPop.addEventListener('click', function () {
-        $navPop.classList.add('!left-0')
-        clearTimeout(closeMenu)
-    })
+    // $navPop.addEventListener('click', function () {
+    //     $navPop.classList.add('!left-0')
+    //     clearTimeout(closeMenu)
+    // })
     $navIco.addEventListener('click', function () {
-
         $navPop.classList.add('!left-0')
         clearTimeout(closeMenu)
     })
-    $navPop.addEventListener('click', function () {
-        closeMenu = setTimeout(() => {
-            $navPop.classList.remove('!left-0')
-        }, 100)
-    })
+    // $navPop.addEventListener('click', function () {
+    //     closeMenu = setTimeout(() => {
+    //         $navPop.classList.remove('!left-0')
+    //     }, 100)
+    // })
 }
 
 globalThis.offMenu = () => {
@@ -57,3 +56,31 @@ function toggleInfo() {
     $menu = document.querySelector('.js-info')
     $menu.classList.toggle('hidden')
 }
+
+const listLinks = document.querySelectorAll(`[data-link]`)
+const listActives = document.querySelectorAll(`[data-linkActive]`)
+var _IS_ACTIVE_LINK = null
+
+listLinks.forEach(el => {
+    el.addEventListener('click', function(ev) {
+        let valor = this.getAttribute('data-link')
+        _IS_ACTIVE_LINK = valor
+        listLinks.forEach( e => {
+            let i = this.getAttribute('data-link')
+            if( i == _IS_ACTIVE_LINK ) {
+                e.classList.toggle('-rotate-90')
+            }else {
+                e.classList.add('-rotate-90')
+            }
+        })
+        listActives.forEach(element => {
+            let id = element.getAttribute('data-linkActive')
+            if( id == _IS_ACTIVE_LINK ) {
+                element.classList.toggle('hidden')
+            }else {
+                element.classList.add('hidden')
+            }
+            console.log(id)
+        });
+    })
+});
