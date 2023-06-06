@@ -80,7 +80,6 @@ listLinks.forEach(el => {
             }else {
                 element.classList.add('hidden')
             }
-            console.log(id)
         });
     })
 });
