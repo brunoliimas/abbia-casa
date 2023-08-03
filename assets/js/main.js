@@ -69,7 +69,9 @@ listLinks.forEach(el => {
         _IS_ACTIVE_LINK = valor
         listLinks.forEach( e => {
             let i = this.getAttribute('data-link')
-            if( i == _IS_ACTIVE_LINK ) {
+            let status = this.getAttribute('data-active')
+            // if( i == _IS_ACTIVE_LINK ) {
+            if( status == "1" ) {
                 // e.classList.toggle('-rotate-90')
                 let url = e.src.split('/').reverse()
                 url[0] = 'minus.png'                 
