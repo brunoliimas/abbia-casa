@@ -68,7 +68,7 @@ listLinks.forEach(el => {
         this.setAttribute('data-active', status == "0" ? "1" : "0")
         _IS_ACTIVE_LINK = valor
         listLinks.forEach(e => {
-            let status = this.getAttribute('data-active')
+            let status = e.getAttribute('data-active')
             let url = e.src.split('/').reverse()
             url[0] = 'plus.png'
             e.src = url.reverse().join('/')
