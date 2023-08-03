@@ -75,7 +75,7 @@ $menu = get_menus_array('header');
 
             <?php foreach ($menu as $index => $a) { ?>
                 <li>
-                    <div class="flex justify-between items-center w-full">
+                    <div class="flex --justify-between items-center w-full">
                         <div>
                             <a class="hover:opacity-75 font-romie text-[33px]" href="<?php echo $a['url'] ?>" title="<?php echo $a['title'] ?>">
                                 <?php echo $a['title'] ?>
