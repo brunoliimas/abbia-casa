@@ -68,12 +68,12 @@ listLinks.forEach(el => {
         listLinks.forEach( e => {
             let i = this.getAttribute('data-link')
             if( i == _IS_ACTIVE_LINK ) {
-                e.classList.toggle('-rotate-90')
+                // e.classList.toggle('-rotate-90')
                 let url = e.src.split('/').reverse()
                 url[0] = 'minus.png'                 
                 e.src = url.reverse().join('/')
             }else {                
-                e.classList.add('-rotate-90')
+                // e.classList.add('-rotate-90')
                 let url = e.src.split('/').reverse()
                 url[0] = 'plus.png'                 
                 e.src = url.reverse().join('/')
