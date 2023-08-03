@@ -128,7 +128,7 @@ apiJson($prod);
             <div class="overflow-x-hidden overflow-x-scroll lg:overflow-x-hidden  w-[100vw] lg:w-full  gap-4">
                 <div class="grid grid-col-3 w-full gap-4">
                     <?php foreach ($novidade as $index => $prod) { ?>
-                        <div class="w-full break-inside-avoid-column text-cor1 relative">
+                        <div class=" break-inside-avoid-column text-cor1 relative">
                             <a href="<?php echo $prod["linkSingle"]; ?>" title="<?php echo $prod["title"]; ?>">
                                 <img class="drop-shadow-lg h-[40vw] lg:h-[15vw] object-cover w-full" loading="lazy" src="<?php echo $prod["image"]; ?>" alt="<?php echo $prod["title"]; ?>">
                             </a>
