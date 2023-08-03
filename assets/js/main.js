@@ -64,8 +64,8 @@ var _IS_ACTIVE_LINK = null
 listLinks.forEach(el => {
     el.addEventListener('click', function(ev) {
         let valor = this.getAttribute('data-link')
-        let status = parseInt( this.getAttribute('data-active') )
-        this.setAttribute( 'data-active', parseInt(!status) )
+        let status = this.getAttribute('data-active') 
+        this.setAttribute( 'data-active', status == "0" ? "1" : "0" )
         _IS_ACTIVE_LINK = valor
         listLinks.forEach( e => {
             let i = this.getAttribute('data-link')
