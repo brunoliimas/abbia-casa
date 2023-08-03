@@ -62,32 +62,28 @@ const listActives = document.querySelectorAll(`[data-linkActive]`)
 var _IS_ACTIVE_LINK = null
 
 listLinks.forEach(el => {
-    el.addEventListener('click', function(ev) {
+    el.addEventListener('click', function (ev) {
         let valor = this.getAttribute('data-link')
-        let status = this.getAttribute('data-active') 
-        this.setAttribute( 'data-active', status == "0" ? "1" : "0" )
+        let status = this.getAttribute('data-active')
+        this.setAttribute('data-active', status == "0" ? "1" : "0")
         _IS_ACTIVE_LINK = valor
-        listLinks.forEach( e => {
-            let i = this.getAttribute('data-link')
+        listLinks.forEach(e => {
             let status = this.getAttribute('data-active')
-            // if( i == _IS_ACTIVE_LINK ) {
-            if( status == "1" ) {
+            let url = e.src.split('/').reverse()
+            url[0] = 'plus.png'
+            e.src = url.reverse().join('/')
+            if (status == "1") {
                 // e.classList.toggle('-rotate-90')
                 let url = e.src.split('/').reverse()
-                url[0] = 'minus.png'                 
-                e.src = url.reverse().join('/')
-            }else {                
-                // e.classList.add('-rotate-90')
-                let url = e.src.split('/').reverse()
-                url[0] = 'plus.png'                 
+                url[0] = 'minus.png'
                 e.src = url.reverse().join('/')
             }
         })
         listActives.forEach(element => {
             let id = element.getAttribute('data-linkActive')
-            if( id == _IS_ACTIVE_LINK ) {
+            if (id == _IS_ACTIVE_LINK) {
                 element.classList.toggle('hidden')
-            }else {
+            } else {
                 element.classList.add('hidden')
             }
         });
