@@ -82,7 +82,7 @@ $menu = get_menus_array('header');
                             </a>
                         </div>
                         <div>
-                            <img src="<?php echo  $layout->getFile('/assets/images/icons/down-arrow.png') ?>" class="-rotate-90 cursor-pointer transition-all ml-2" width="32" data-link="<?php echo $index ?>">
+                            <img src="<?php echo  $layout->getFile('/assets/images/icons/plus.png') ?>" class="-rotate-90 cursor-pointer transition-all ml-2" width="32" data-link="<?php echo $index ?>">
                         </div>
                     </div>
                     <ul class="hidden pl-4" data-linkActive="<?php echo $index ?>">
