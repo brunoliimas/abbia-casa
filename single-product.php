@@ -7,7 +7,9 @@ $cat = new Product();
 
 $like = $cat->get_all_prod_bay_id_cats($product->get_category_ids());
 
-$novidade =  $like;
+shuffle($like);
+
+$novidade =  array_slice($like, 3)[0] ?? [];
 
 $prod = [
     "id" => get_the_ID(),
