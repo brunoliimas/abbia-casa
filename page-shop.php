@@ -85,8 +85,8 @@ function getWidthByIndex(&$stateIndex)
                             R$ <?php echo $p['price'] ?>
                         </span>
                         <div class="flex justify-between items-center pt-4">
-                            <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $p['addToCart'] ?>" title="Adicionnar">
-                                Adicionnar
+                            <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $p['addToCart'] ?>" title="Adicionar">
+                                Adicionar
                             </a>
                             <?php echo $p['whishList'] ?>
                         </div>
@@ -123,8 +123,8 @@ function getWidthByIndex(&$stateIndex)
                         <span class="block text-[18px]">
                             <?php echo $prod["price"]; ?>
                         </span>
-                        <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
-                            Adicionnar
+                        <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#fdfdfd] transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionar">
+                            Adicionar
                         </a>
                     </div>
                 <?php } ?>

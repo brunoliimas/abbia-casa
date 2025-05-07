@@ -14,7 +14,7 @@
         <div class="custom-post">
             <div class="grid grid-cols-1 md:grid-cols-2  content-center gap-4 mt-[40px] pt-[40px]">
                 <div>
-                    <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/cura-1.png') ?>" alt="art" loading="lazy">
+                    <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/abbia-casa-e-voce.jpg') ?>" alt="art" loading="lazy">
                 </div>
                 <div class="lg:px-[120px]">
                     <h2 class="text-[#EE705A]">Abbia Casa e você</h2>
@@ -38,12 +38,12 @@
                     </p>
                 </div>
                 <div>
-                    <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/cura-2.png') ?>" alt="art" loading="lazy">
+                    <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/melange.jpg') ?>" alt="art" loading="lazy">
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2  content-center gap-4 md:border-t-[1px] border-cor1 mt-[40px] pt-[40px]">
                 <div>
-                    <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/cura-3.png') ?>" alt="art" loading="lazy">
+                    <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/memoria-afetivas.jpg') ?>" alt="art" loading="lazy">
                 </div>
                 <div class="lg:px-[120px]">
                     <h2>
@@ -73,7 +73,7 @@
                     </p>
                 </div>
                 <div>
-                    <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/cura-4.png') ?>" alt="art" loading="lazy">
+                    <img class="w-full" src="<?php echo  $l->getFile('/assets/images/curadoria/harmonia-e-fluidez.jpg') ?>" alt="art" loading="lazy">
                 </div>
             </div>
         </div>

@@ -6,6 +6,29 @@ $cats = [
     [
         "title" => "Beauté",
         "link" => $l->site . "/product-category/beaute/",
+        "img" => $l->getFile('/assets/images/home-category/beaute.old.png'),
+    ],
+    [
+        "title" => "Casa",
+        "link" => $l->site . "/product-category/casa/",
+        "img" => $l->getFile('/assets/images/home-category/casa.jpg'),
+    ],
+    [
+        "title" => "Acessórios",
+        "link" => $l->site . "/product-category/acessorios/",
+        "img" => $l->getFile('/assets/images/home-category/beaute.jpg'),
+    ],
+    [
+        "title" => "Sac du Jour",
+        "link" => $l->site . "/product-category/sac-du-jour/",
+        "img" => $l->getFile('/assets/images/home-category/sacdujour.jpg'),
+    ],
+];
+
+/* $cats = [
+    [
+        "title" => "Beauté",
+        "link" => $l->site . "/product-category/beaute/",
         "img" => $l->getFile('/assets/images/home-category/beaute.png'),
     ],
     [
@@ -23,10 +46,10 @@ $cats = [
         "link" => $l->site . "/product-category/colabs/",
         "img" => $l->getFile('/assets/images/home-category/colab.png'),
     ],
-];
+]; */
 
 // show 4
-$sacProd =  $cat->productsByCategorySlug('beaute');
+$sacProd =  $cat->productsByCategorySlug('sac-du-jour');
 $sacProd =  array_splice($sacProd, 0, 4);
 
 
@@ -46,8 +69,8 @@ $novidade =  array_splice($novidade, 0, 4);
 
 <section>
     <h1 class="text-center lg:leading-[80px] font-romie text-[26px] md:text-[50px] lg:text-[66px]  tracking-[3px]">
-        Cuidados diáros, <br>
-        interior e curiosidades
+        Cuidados Diários, <br>
+        interiores e curiosidades
     </h1>
     <img class="w-[300px] lg:w-[380px] mx-auto mt-[55px] mb-[55px]" loading="lazy" src="<?php echo $l->getFile('/assets/logo/AbbiaCasa-04.svg'); ?>" alt="Abbia Casa">
 </section>
@@ -73,7 +96,7 @@ $novidade =  array_splice($novidade, 0, 4);
 
 <section class="container mx-auto relative my-[60px] ">
     <img class="w-full" loading="lazy" src="<?php echo $l->getFile('/assets/images/hero-section/novidade.png'); ?>" alt="Novidades">
-    <a class="tracking-[3px] rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[114px] py-[7px] lg:w-[285px] lg:py-[15px] text-cor1 font-romie text-[12px] lg:text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $l->site ?>/product-category/novidade/" title="Novidades">
+    <a class="tracking-[3px] rounded-[8px] drop-shadow-lg translate-x-[-50%] translate-y-[-50%] text-center w-[114px] py-[7px] lg:w-[285px] lg:py-[15px] text-cor1 font-romie text-[12px] lg:text-[30px] absolute top-[50%] left-[50%] bg-white hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $l->site ?>/product-category/novidades/" title="Novidades">
         Novidades
     </a>
 </section>
@@ -95,8 +118,8 @@ $novidade =  array_splice($novidade, 0, 4);
             Casa, que chegou de maneira despretensiosa mas com o
             charme que procurávamos para dar o toque final.
         </p>
-        <a class="hidden md:inline-block text-cor1 bg-white drop-shadow-lg rounded-[8px] px-8 py-2 mb-4  transition-all hover:bg-[#EE705A] hover:text-white" href="<?php echo site_url() ?>/quem-somos/" title="Conhece">
-            Conhece
+        <a class="hidden md:inline-block text-cor1 bg-white drop-shadow-lg rounded-[8px] px-8 py-2 mb-4  transition-all hover:bg-[#EE705A] hover:text-white" href="<?php echo site_url() ?>/product-category/sac-du-jour/" title="Conhece">
+            Conheça
         </a>
     </div>
 
@@ -116,8 +139,8 @@ $novidade =  array_splice($novidade, 0, 4);
                 Casa, que chegou de maneira despretensiosa mas com o
                 charme que procurávamos para dar o toque final.
             </p>
-            <a class="hidden md:inline-block text-cor1 bg-white drop-shadow-lg rounded-[8px] px-8 py-2 mb-4 hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo site_url() ?>/quem-somos/" title="Conhece">
-                Conhece
+            <a class="hidden md:inline-block text-cor1 bg-white drop-shadow-lg rounded-[8px] px-8 py-2 mb-4 hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo site_url() ?>/product-category/sac-du-jour/" title="Conhece">
+                Conheça
             </a>
         </div>
 
@@ -140,11 +163,14 @@ $novidade =  array_splice($novidade, 0, 4);
                 </span>
                 <div class="flex justify-between items-center">
                     <div>
-                        <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
-                            Adicionnar
-                        </a>
+                        <!-- <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionar">
+                            Adicionar
+                        </a> -->
+                        <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod['linkSingle'] ?>" title="Adicionar">
+                                Saiba mais
+                            </a>
                     </div>
-                    <?php echo $prod["whishList"]; ?>
+                    <?php echo $prod["whishList"]; ?>                    
                 </div>
             </div>
             <?php if ($index == 0) { ?>
@@ -186,8 +212,8 @@ $novidade =  array_splice($novidade, 0, 4);
                         </span>
                         <div class="flex justify-between items-center ">
                             <span>
-                                <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-8 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
-                                    Adicionnar
+                                <a class="text-[18px] font-face text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-8 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionar">
+                                    Adicionar
                                 </a>
                             </span>
                             <?php echo $prod["whishList"]; ?>
@@ -230,8 +256,8 @@ $novidade =  array_splice($novidade, 0, 4);
                         </span>
                         <div class="flex justify-between items-center">
                             <span>
-                                <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionnar">
-                                    Adicionnar
+                                <a class="text-[18px] text-cor1 font-face bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all" href="<?php echo $prod["addToCart"]; ?>" title="Adicionar">
+                                    Adicionar
                                 </a>
                             </span>
                             <?php echo $prod["whishList"]; ?>
@@ -262,7 +288,7 @@ $novidade =  array_splice($novidade, 0, 4);
                     em nossas raízes e fontes ancestrais.
                 </p>
             </div>
-            <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-3.png'); ?>" alt="img">
+            <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/memoria-afetivas.jpg'); ?>" alt="img">
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
@@ -278,10 +304,10 @@ $novidade =  array_splice($novidade, 0, 4);
                 </p>
                 <img class="w-[120px] mx-auto mt-4" loading="lazy" src="<?php echo $l->getFile('/assets/logo/AbbiaCasa-01.svg'); ?>" alt="Abbia Casa">
             </div>
-            <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-1.png'); ?>" alt="img">
+            <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/harmonia-e-fluidez.jpg'); ?>" alt="img">
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-2.png'); ?>" alt="img">
+            <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/melange.jpg'); ?>" alt="img">
             <div>
                 <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4 tracking-[2px]">
                     Mélange
@@ -295,7 +321,7 @@ $novidade =  array_splice($novidade, 0, 4);
             </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/art-4.png'); ?>" alt="img">
+            <img class="w-full mb-8" loading="lazy" src="<?php echo $l->getFile('/assets/images/home-article/abbia-casa-e-voce.jpg'); ?>" alt="img">
             <div class="relative">
                 <h2 class="text-[#EE705A] font-romie text-[24px] mb-4 border-t-2 border-cor6 pt-4 tracking-[2px]">
                     Memória afetivas

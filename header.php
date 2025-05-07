@@ -64,7 +64,7 @@ $menu = get_menus_array('header');
 
     <?php wp_body_open(); ?>
 
-    <nav id="js-nav-pop" class="fixed top-0 left-[-80vw] min-w-[320px] max-w-[75vw] lg:left-[-40vw] h-[100vh] lg:h-full bg-cor3 p-4 z-10 transition-all duration-300 ease-in-out">
+    <nav id="js-nav-pop" class="fixed top-0 left-[-80vw] min-w-[320px] max-w-[75vw] lg:left-[-40vw] h-[100vh] lg:h-full bg-cor3 p-4 z-10 transition-all duration-300 ease-in-out" style="z-index: 9999;">
         <span>
             <img onclick="offMenu()" class="w-[40px] cursor-pointer" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
         </span>
@@ -82,7 +82,7 @@ $menu = get_menus_array('header');
                             </a>
                         </div>
                         <div>
-                            <img src="<?php echo  $layout->getFile('/assets/images/icons/plus.png') ?>" class=" cursor-pointer transition-all ml-2 p-2" width="32" data-active="0"  data-link="<?php echo $index ?>">
+                            <img src="<?php echo  $layout->getFile('/assets/images/icons/plus.png') ?>" class=" cursor-pointer transition-all ml-2 p-2" width="32" data-active="0" data-link="<?php echo $index ?>">
                         </div>
                     </div>
                     <ul class="hidden pl-4" data-linkActive="<?php echo $index ?>">
@@ -101,30 +101,35 @@ $menu = get_menus_array('header');
             <li>
                 <a class=" text-[18px] font-agrandir pl-4 hover:opacity-75" href="#" title="+ Infos" onclick="toggleInfo()">+ Infos </a>
                 <ul class="js-info hidden pl-4">
-                    <li>
+                    <!-- <li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/contato#newsletter" title="Newsletter">Newsletter</a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/contato" title="Contato">Contato</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/quem-somos" title="Quem somos">Quem somos</a>
                     </li>
                     <li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/lgpd" title="Politica de privacidade">Politica de privacidade</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/politica-de-venda" title="Politica de venda">Politica de venda</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/faq" title="FAQ">FAQ</a>
                     </li>
                 </ul>
             </li>
         </ul>
-        <a href="https://www.instagram.com/abbiacasa" target="_blank" rel="noopener noreferrer" title="instagram">
-            <img src="<?php echo  $layout->getFile('/assets/images/social/instagram.svg') ?>" alt="instagram" loading="lazy">
-        </a>
+        <div class="flex justify-start items-center gap-4">
+            <a href="https://www.instagram.com/abbiacasa" target="_blank" rel="noopener noreferrer" title="instagram">
+                <img src="<?php echo  $layout->getFile('/assets/images/social/instagram.svg') ?>" alt="instagram" loading="lazy">
+            </a>
+            <a href="https://www.facebook.com/share/1Fz65kkUDi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <img src="<?php echo  $layout->getFile('/assets/images/social/facebook.svg') ?>" alt="Facebook" loading="lazy">
+            </a>
+        </div>
         <div class="flex justify-between items-center absolute bottom-0 left-0 w-full p-4 bg-color-3 md:hidden">
             <a href="<?php echo site_url() ?>/minha-conta" title="Entrar">
                 <?php echo is_user_logged_in() ? 'Perfil' : 'Entrar' ?>
@@ -143,19 +148,20 @@ $menu = get_menus_array('header');
         </div>
     </nav>
 
-    <header>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; background-color: rgb(254 253 251 / var(--tw-bg-opacity)); z-index: 9998;">
         <div class="block px-4">
             <div class="flex flex-row justify-between items-center h-[70px]">
                 <a id="js-nav-ico" href="javascript:void(0)" title="menu site" class="flex-none w-[50px] ml-5 lg:ml-0">
                     <img src="<?php echo $layout->getFile('/assets/images/layout/menu.svg') ?>" alt="menu" loading="lazy">
                 </a>
-                <form action="<?php echo site_url() ?>" class="flex-none w-full ml-5 lg:ml-0 lg:w-[70%]">
+                <!-- <form action="<?php echo site_url() ?>" class="flex-none w-full ml-5 lg:ml-0 lg:w-[70%]"> -->
+                <form action="<?php echo site_url() ?>" class="flex-none w-full ml-5 lg:ml-0 lg:w-[20%]">
                     <label for="">
                         Pesquisar
                         <input name="s" type="search" class="border-b border-cor1 outline-0 bg-transparent" title="O que você procura?">
                     </label>
                 </form>
-                <a href="<?php echo site_url() ?>/minha-conta" title="Entrar" class="hover:underline flex-none w-[50px] hidden lg:block">
+                <!--<a href="<?php echo site_url() ?>/minha-conta" title="Entrar" class="hover:underline flex-none w-[50px] hidden lg:block">
                     <?php echo is_user_logged_in() ? 'Perfil' : 'Entrar' ?>
                 </a>
                 <a href="<?php echo site_url() ?>/lista-de-desejos" title="lista de desejos" class="flex-none w-[50px] hidden lg:block">
@@ -168,7 +174,10 @@ $menu = get_menus_array('header');
                         </div>
                     <?php } ?>
                     <img class="transition-all hover:scale-[0.8]" src="<?php echo  $layout->getFile('/assets/images/layout/bag.svg') ?>" alt="carrinho" loading="lazy">
-                </a>
+                </a>-->
             </div>
         </div>
     </header>
+
+    <div style="margin-top: 70px;">
+        <!-- O restante do conteúdo da página -->
