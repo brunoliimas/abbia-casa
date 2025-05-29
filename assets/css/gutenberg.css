@@ -10,7 +10,8 @@
     letter-spacing: 0.065em;
 }
 
-.custom-post p {
+.custom-post p,
+.custom-post ol {
     color: var(--cor1);
     font-style: normal;
     font-weight: 228;
@@ -31,7 +32,8 @@
         letter-spacing: 0.065em;
     }
 
-    .custom-post p {
+    .custom-post p,
+    .custom-post ol {
         font-size: 18px;
         line-height: 23px;
         letter-spacing: 0.065em;
@@ -50,7 +52,8 @@
         margin-bottom: 40px;
     }
 
-    .custom-post p {
+    .custom-post p,
+    .custom-post ol {
         font-size: 24px;
         line-height: 31px;
         letter-spacing: 0.065em;

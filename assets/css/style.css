@@ -20,6 +20,15 @@
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart:before {
     font-size: 30px;
 }
+
 .tinv-wishlist .tinvwl_add_to_wishlist_button.tinvwl-icon-heart.no-txt:before {
     left: 0 !important;
+}
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
+ol {
+    list-style: decimal !important;
 }

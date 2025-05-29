@@ -12,8 +12,8 @@ $sT = "text-[12px] lg:text-[14px] text-cor1";
 
 <footer class="bg-cor3 px-4 py-[40px] lg:py[50px]">
     <div class="container mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            <div class="lg:col-span-2">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="col-span-2 lg:col-span-1">
                 <?php
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['newsletter_email'])) {
                     $email = sanitize_email($_POST['newsletter_email']);
@@ -36,7 +36,7 @@ $sT = "text-[12px] lg:text-[14px] text-cor1";
                 <form method="POST" action="" class="flex gap-2">
                     <input type="email" name="newsletter_email" required placeholder="Seu e-mail"
                         class="outline-0 bg-transparent border-b border-cor1 mb-4 w-full" />
-                    <button type="submit" class="mt-2 bg-cor1 text-white px-4 py-2">Cadastrar</button>
+                    <button type="submit" class="text-cor1 bg-white drop-shadow-lg rounded-[8px] px-4 py-2 mb-4 inline-block my-[25px] hover:bg-[#EE705A] hover:text-white transition-all">Enviar</button>
                 </form>
                 <div class="flex gap-6 mt-4">
                     <a href="https://www.instagram.com/abbiacasa/" class="<?php echo $sT; ?>" target="_blank" rel="noopener noreferrer" title="instagram">

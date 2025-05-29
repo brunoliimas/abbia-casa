@@ -64,15 +64,16 @@ $menu = get_menus_array('header');
 
     <?php wp_body_open(); ?>
 
-    <nav id="js-nav-pop" class="fixed top-0 left-[-80vw] min-w-[320px] max-w-[75vw] lg:left-[-40vw] h-[100vh] lg:h-full bg-cor3 p-4 z-10 transition-all duration-300 ease-in-out" style="z-index: 9999;">
-        <span>
-            <img onclick="offMenu()" class="w-[40px] cursor-pointer" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
-        </span>
-        <a href="<?php echo site_url() ?>" title="Abbia Casa">
-            <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
-        </a>
-        <ul>
-
+    <nav id="js-nav-pop" class="fixed top-0 left-[-80vw] min-w-[320px] max-w-[75vw] lg:left-[-40vw] h-[100vh] lg:h-full bg-cor3 ppt-16 pb-8 px-12 z-10 transition-all duration-300 ease-in-out overflow-scroll flex flex-col" style="z-index: 9999;">
+        <div class="flex justify-between items-center">
+            <a href="<?php echo site_url() ?>" title="Abbia Casa">
+                <img class="w-[70px] my-4 pointer-events-none   " src="<?php echo  $layout->getFile('/assets/logo/AbbiaCasa-03.svg') ?>" alt="Abbia Casa" loading="lazy">
+            </a>
+            <span>
+                <img onclick="offMenu()" class="w-[40px] cursor-pointer" src="<?php echo  $layout->getFile('/assets/images/layout/close.svg') ?>" alt="close" loading="lazy">
+            </span>
+        </div>
+        <ul class="flex flex-col gap-4">
             <?php foreach ($menu as $index => $a) { ?>
                 <li>
                     <div class="flex --justify-between items-center w-full">
@@ -100,29 +101,20 @@ $menu = get_menus_array('header');
 
             <li>
                 <a class=" text-[18px] font-agrandir pl-4 hover:opacity-75" href="#" title="+ Infos" onclick="toggleInfo()">+ Infos </a>
-                <ul class="js-info hidden pl-4">
-                    <!-- <li>
-                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/contato#newsletter" title="Newsletter">Newsletter</a>
-                    </li> -->
-                    <!-- <li>
-                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/contato" title="Contato">Contato</a>
-                    </li> -->
+                <ul class="js-info hidden pl-4 flex flex-col gap-2">
                     <li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/quem-somos" title="Quem somos">Quem somos</a>
                     </li>
                     <li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/lgpd" title="Politica de privacidade">Politica de privacidade</a>
                     </li>
-                    <!--<li>
-                        <a class="hover:opacity-75" href="<?php echo site_url() ?>/politica-de-venda" title="Politica de venda">Politica de venda</a>
-                    </li>-->
                     <li>
                         <a class="hover:opacity-75" href="<?php echo site_url() ?>/faq" title="FAQ">FAQ</a>
                     </li>
                 </ul>
             </li>
         </ul>
-        <div class="flex justify-start items-center gap-4">
+        <div class="flex justify-start items-center gap-4 mt-8">
             <a href="https://www.instagram.com/abbiacasa" target="_blank" rel="noopener noreferrer" title="instagram">
                 <img src="<?php echo  $layout->getFile('/assets/images/social/instagram.svg') ?>" alt="instagram" loading="lazy">
             </a>
@@ -130,7 +122,7 @@ $menu = get_menus_array('header');
                 <img src="<?php echo  $layout->getFile('/assets/images/social/facebook.svg') ?>" alt="Facebook" loading="lazy">
             </a>
         </div>
-        <div class="flex justify-between items-center absolute bottom-0 left-0 w-full p-4 bg-color-3 md:hidden">
+        <div class="hidden justify-between items-center mt-auto w-full p-4 bg-color-3 md:hidden">
             <a href="<?php echo site_url() ?>/minha-conta" title="Entrar">
                 <?php echo is_user_logged_in() ? 'Perfil' : 'Entrar' ?>
             </a>

@@ -86,8 +86,8 @@ $novidade =  array_splice($novidade, 0, 4);
                 <a href="<?php echo $cat["link"] ?>" title="<?php echo $cat["title"] ?>">
                     <img class="w-full" loading="lazy" src="<?php echo $cat["img"] ?>" alt="<?php echo $cat["title"] ?>">
                 </a>
-                <a class="hover:underline uppercase text-[12px] lg:text-[14px] hidden md:block md:mt-[16px] font-agrandir text-center tracking-[2px]" href="<?php echo $cat["link"] ?>" title="Descubrir">
-                    Descubrir
+                <a class="hover:underline uppercase text-[12px] lg:text-[14px] hidden md:block md:mt-[16px] font-agrandir text-center tracking-[2px]" href="<?php echo $cat["link"] ?>" title="Descobrir">
+                    Descobrir
                 </a>
             </div>
         <?php } ?>

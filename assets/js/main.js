@@ -9,6 +9,7 @@ if ($navPop && $navIco) {
     // })
     $navIco.addEventListener('click', function () {
         $navPop.classList.add('!left-0')
+        document.body.classList.add('body-no-scroll')
         clearTimeout(closeMenu)
     })
     // $navPop.addEventListener('click', function () {
@@ -23,6 +24,7 @@ globalThis.offMenu = () => {
     let $navPop = document.querySelector("#js-nav-pop")
     if ($navPop) {
         $navPop.classList.remove('!left-0')
+        document.body.classList.remove('body-no-scroll')
     }
 }
 

@@ -13,7 +13,9 @@ $l = new Layout();
         </h1>
         <div class="block md:flex gap-[30px]">
             <div class="custom-post">
-                <?php $page->content(); ?>
+                <div class="px-4 md:px-8">
+                    <?php $page->content(); ?>
+                </div>
             </div>
         </div>
     </div>
